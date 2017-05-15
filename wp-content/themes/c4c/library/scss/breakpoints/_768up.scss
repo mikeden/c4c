@@ -19,6 +19,12 @@ GENERAL STYLES
 
 body {}
 
+
+
+p {
+	font-size: 18px;
+}
+
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -43,6 +49,7 @@ HEADER STYLES
 	width: 185px;
 	height: 48px;
 	background-position: 46% 21px;
+	z-index:99;
 
 	.highlight {
 		opacity:0;
@@ -72,9 +79,64 @@ HEADER STYLES
 }
 
 .home .logo {
+
 	.highlight {
 		opacity:1;
 	}
+}
+
+
+
+.videoWrapper {
+	width:94%;
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+.page-subhead {
+	
+	h4 {
+		font-size: 16px;
+		margin-left: 11%;
+	}
+
+	.top-line {
+
+		.highlight {
+			border-left: 3px solid $white;
+			margin-left: 11%;
+
+		}
+
+	}
+}
+
+/*********************
+HOME STYLES
+*********************/
+
+
+.home-intro {
+	position: absolute;
+	width: 40%;
+
+	
+	margin: 0;
+	margin-top: auto;
+	display:block;
+	background:$white;
+	z-index:2;
+	top:-138%;
+	left: 8%;
+
+	h1 {
+		font-size: 37px;
+	}
+}
+
+.radio-callout {
+	width: 48%;
+	margin-left: 50%;
 }
 
 

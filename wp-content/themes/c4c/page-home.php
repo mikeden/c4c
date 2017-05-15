@@ -2,65 +2,46 @@
 
 			<div id="content">
 
+				
+
+				<div class="home-wrapper">
+					<div class="videoWrapper">
+						<iframe src="https://player.vimeo.com/video/2379456?autoplay=1&loop=1&byline=0&title=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					</div>
+				</div>
+
+				
+
 				<div id="inner-content" class="wrap cf">
 
-					<div class="videoWrapper">
-					<iframe src="https://player.vimeo.com/video/175432900?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					<div class="home-intro">
+						<h1><a href="conversations/" class="alt1">Conversations</a></h1>
+						<h1><a href="series/" class="alt1">Series</a></h1>
+						<h1><a href="journal/" class="alt1">Journal</a></h1>
+						<div class="hr"></div>
+						<p>Challenge for Change uses listening and the democratic power of media to foster connections and strengthen relationships between people and communities. </p>
+						<p>Along the way, we are telling some pretty amazing stories.</p>
 					</div>
 
-						<main id="main" class="m-all t-3f3 d-7of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<div class="radio-callout">
+						<div class="block">
+							<a href="#" class="aqua-btn sm">Play and Go</a>
+							<h4>C4C Radio</h4>
+							<p>Every C4C Conversation in one convenient playlist</p>
+							<div class="clearfix"></div>
+						</div>
+					</div>
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				</div>
+				<div class="wrap cf">
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-
-								<header class="article-header">
-
-									<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
-
-									<p class="byline vcard">
-										<?php printf( __( 'Posted', 'bonestheme').' <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> '.__( 'by',  'bonestheme').' <span class="author">%3$s</span>', get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-									</p>
-
-								</header> <?php // end article header ?>
-
-								<section class="entry-content cf" itemprop="articleBody">
-									<?php
-										// the content (pretty self explanatory huh)
-										the_content();
-
-										/*
-										 * Link Pages is used in case you have posts that are set to break into
-										 * multiple pages. You can remove this if you don't plan on doing that.
-										 *
-										 * Also, breaking content up into multiple pages is a horrible experience,
-										 * so don't do it. While there are SOME edge cases where this is useful, it's
-										 * mostly used for people to get more ad views. It's up to you but if you want
-										 * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
-										 *
-										 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
-										 *
-										*/
-										wp_link_pages( array(
-											'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
-											'after'       => '</div>',
-											'link_before' => '<span>',
-											'link_after'  => '</span>',
-										) );
-									?>
-								</section> <?php // end article section ?>
-
-								<footer class="article-footer cf">
-
-								</footer>
-
-								<?php comments_template(); ?>
-
-							</article>
-
-							<?php endwhile; endif; ?>
-
-							<h1>Featured Conversations</h1>
+					<div class="page-subhead">
+						<div class="top-line">
+							<div class="bg"></div>
+							<div class="highlight"></div>
+						</div>
+						<h4>Recent Conversations</h4>
+					</div>
 
 							<?php query_posts(array(
 							'posts_per_page' => 2,
@@ -83,8 +64,42 @@
 
 							<?php wp_reset_query(); ?> 
 
-						</main>
 
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum ultricies pulvinar. Pellentesque quis metus interdum, pharetra enim et, mollis augue. Etiam at nisi lorem. Aenean in erat est. Praesent faucibus fringilla est non posuere. Duis aliquet augue vel tortor viverra tempus. Phasellus vestibulum iaculis quam in luctus. In laoreet nibh vitae est suscipit varius et eu tortor. Praesent dignissim id quam a porta. Integer et ipsum imperdiet, placerat mi tempor, mollis enim. Curabitur dui dolor, bibendum et ullamcorper quis, consequat sit amet nibh. Nullam venenatis diam mauris, ut semper ante pretium sed.
+					</p>
+					<p>
+						Sed finibus magna sit amet eleifend mattis. Praesent in purus at orci gravida cursus eget eu ex. Aliquam in turpis quis neque rhoncus dapibus sit amet quis ante. Nulla volutpat arcu sed euismod mollis. Aliquam imperdiet ac ipsum et iaculis. Phasellus sit amet felis vel turpis aliquet tempus eget vel elit. Nullam nec felis congue, ultrices ipsum quis, posuere sem. Nullam vitae viverra mi, volutpat finibus quam. Morbi sed urna ligula. Fusce tincidunt magna tempus purus hendrerit, in gravida lectus blandit. Aenean sem arcu, luctus non nunc sit amet, condimentum tempus arcu. Aliquam varius id justo at aliquet. Aliquam cursus sollicitudin justo id pulvinar. Quisque non augue id augue euismod viverra. Integer pharetra, ligula eget pretium viverra, nisl turpis facilisis odio, at blandit nisl est nec dui.
+					</p>
+					<pp>
+						Nam aliquam eleifend quam, ac mollis justo convallis at. Proin justo nisi, pretium sit amet ligula sed, sodales imperdiet ligula. Sed ac metus quis magna accumsan interdum. Nam nec aliquet mi, in pharetra augue. Donec pretium convallis consectetur. Sed non varius dolor. Proin non aliquam neque, vitae euismod velit. Vivamus tincidunt dui quam, in porta quam pretium rhoncus. Vestibulum augue justo, dignissim quis erat non, dictum sodales massa.
+					</p>
+
+					<div class="page-subhead l100">
+						<div class="top-line">
+							<div class="bg"></div>
+							<div class="highlight"></div>
+						</div>
+						<h4>Featured Series</h4>
+					</div>
+
+					<div class="page-subhead l130">
+						<div class="top-line">
+							<div class="bg"></div>
+							<div class="highlight"></div>
+						</div>
+						<h4>Our Supporters</h4>
+					</div>
+
+					<div class="page-subhead l80">
+						<div class="top-line">
+							<div class="bg"></div>
+							<div class="highlight"></div>
+						</div>
+						<h4>C4C Radio</h4>
+					</div>
+
+					<iframe width="100%" height="300" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/224785489&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
 
 				</div>
 

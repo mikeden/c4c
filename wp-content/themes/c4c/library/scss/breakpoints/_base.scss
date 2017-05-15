@@ -16,7 +16,7 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $garamond-capt;
+	font-family: $garamond-reg;
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
@@ -77,14 +77,15 @@ style a page via class
 LAYOUT & GRID STYLES
 *********************/
 .wrap {
-	width: 86.9%;
+	width: 94%;
 	max-width: 1600px;
 	margin: 0 auto;
+	position: relative;
 }
 
 .videoWrapper {
 	position: relative;
-	padding-bottom: 55.25%; /* 16:9 */
+	padding-bottom: 51.5%; /* 16:9 */
 	padding-top: 25px;
 	height: 0;
 }
@@ -94,6 +95,148 @@ LAYOUT & GRID STYLES
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+.hr {
+	display:block;
+	width: 26px;
+	height: 2px;
+	background: $aqua1;
+	margin: 18px 0 18px 0;
+}
+
+.page-subhead {
+	display:block;
+	width: 100%;
+	padding-top: 30px;
+
+	h4 {
+		font-size: 14px;
+		color:$aqua1;
+		padding: 25px 0 25px 0;
+	}
+
+	.top-line {
+		display:block;
+		position: relative;
+		width: 100%;
+		height: 6px;
+
+		.bg {
+			display: block;
+			width: 100%;
+			height: 2px;
+			background: $aqua1;
+			position: absolute;
+			top: 2px;
+			left:0;
+			z-index:-1;
+		}
+
+		.highlight {
+			display:block;
+			background:$aqua1;
+			width: 125px;
+			height: 6px;
+			border-right: 3px solid $white;
+			z-index:2;
+		}
+
+		
+	}
+
+	&.l80{
+		.highlight {
+			width: 80px;
+		}
+	}
+
+	&.l100 {
+		.highlight {
+			width: 100px;
+		}
+	}
+
+	&.l130 {
+		.highlight {
+			width: 130px;
+		}
+	}
+}
+
+/*********************
+HOME STYLES
+*********************/
+
+.home-wrapper {
+	display:block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.home-intro {
+	position: relative;
+	margin: 0 auto;
+	margin-top: -40px;
+	display:block;
+	padding:40px 40px 0 40px;
+	background:$white;
+	z-index:2;
+
+	h1 {
+		font-size: 25px;
+		padding-bottom: .4em;
+	}
+
+	p {
+		padding-bottom: 2em;
+	}
+
+	.hr {
+		margin-bottom: 44px;
+	}
+}
+
+.radio-callout {
+	display:block;
+	position: relative;
+	background: $aqua1;
+	width: 100%;
+	
+
+
+
+	margin-top: 7%;
+	margin-bottom: 10%;
+
+	.block {
+		display:block;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		padding: 20px;
+
+		p, h4 {
+			color:$white;
+		}
+
+		p {
+			padding-right: 130px;
+			padding-bottom:0;
+		}
+
+		a {
+			position: absolute;
+			top: 50%;
+			right:20px;
+			z-index:2;
+			margin-top: -22px;
+		}
+	}
+
+	
+
 }
 
 /*********************
@@ -129,13 +272,28 @@ a, a:active, a:focus {
   outline: 0;
 }
 
+a.alt1 {
+	color: $text-color;
+	text-decoration: none;
+
+	&:visited {
+		color: $text-color;
+		text-decoration: none;
+	}
+
+	&:hover {
+		border-bottom: 2px solid $aqua1;
+	}
+}
+
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	text-rendering: optimizelegibility;
-	font-weight: 500;
+	font-weight: 600;
+	margin:0;
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -150,6 +308,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 h1, .h1 {
 	font-size: 2.5em;
 	line-height: 1.333em;
+	padding: 0 0 .7em 0;
 }
 
 h2, .h2 {
@@ -163,8 +322,9 @@ h3, .h3 {
 }
 
 h4, .h4 {
-	font-size: 1.1em;
-	font-weight: 700;
+	font-family: $galano;
+	font-size: 19px;
+	font-weight: 500;
 }
 
 h5, .h5 {
@@ -172,6 +332,12 @@ h5, .h5 {
 	line-height: 2.09em;
 	text-transform: uppercase;
 	letter-spacing: 2px;
+}
+
+p {
+	font-size: 16px;
+	margin:0;
+	padding: 0 0 .7em 0;
 }
 
 /*********************
