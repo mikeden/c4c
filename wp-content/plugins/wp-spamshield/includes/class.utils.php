@@ -1,7 +1,7 @@
 <?php
 /**
  *  WP-SpamShield Utilities
- *  File Version 1.9.9.9.6
+ *  File Version 1.9.9.9.9
  */
 
 /* Make sure file remains secure if called directly */
@@ -55,7 +55,7 @@ class WPSS_Utils extends WP_SpamShield {
 
 	/**
 	 *  @alias of 		WP_SpamShield::is_php_ver()
-	 *	@used by		WPSS_Utils::ksort_array(), 
+	 *	@used by		WPSS_Utils::ksort_array(), ...
 	 *  @since			1.9.9.8.2
 	 */
 	static public function is_php_ver( $ver ) {
@@ -813,7 +813,7 @@ class WPSS_Utils extends WP_SpamShield {
 	 */
 	static public function is_ini_value_changeable( $setting ) {
 		if( WP_SpamShield::is_wp_ver( '4.6' ) ) {
-			return wp_is_ini_value_changeable( $setting ) ? TRUE : FALSE;
+			return wp_is_ini_value_changeable( $setting );
 		}
 		return TRUE;
 	}
@@ -997,5 +997,4 @@ class WPSS_Func extends WPSS_PHP {
 	}
 
 }
-
 

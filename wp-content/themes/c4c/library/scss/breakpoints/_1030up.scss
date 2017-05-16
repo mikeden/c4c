@@ -27,3 +27,47 @@ be seen on the Desktop.
 	margin-left: 43%;
 }
 
+h1, .h1 {
+	font-size: 36px;
+}
+
+/*********************
+CONVERSATION STYLES
+*********************/
+
+.convo {
+	p.quote {
+		font-size: 32px;
+	}
+}
+
+.single-conversations {
+	
+	.c-header {
+		h1 {
+			font-size: 38px;
+		}
+
+		.caption {
+			font-size: 22px;
+		}
+	}
+}
+
+
+/*********************
+SERIES STYLES
+*********************/
+
+.featured-series {
+
+	.bg-photo {
+		height: 640px;
+	}
+	
+	.copy {
+		width: 32%;
+	}
+}
+
+

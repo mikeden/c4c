@@ -63,11 +63,11 @@ and it will create a button dependant on those variables.
   @extend %btn; // here we load the btn defaults
   background-color: $aqua1;
   border: 2px solid $white;
-  color:$white;
+  color:$white !important;
 
   &:hover,
   &:focus {
-    color:$aqua1;
+    color:$aqua1 !important;
     background-color: $white;
     border: 2px solid $aqua1;
   } // end hover
@@ -84,9 +84,15 @@ and it will create a button dependant on those variables.
   border: 2px solid $aqua1;
   color:$aqua1;
 
+  &:visited {
+    background-color: $white;
+    border: 2px solid $aqua1;
+    color:$aqua1;
+  }
+
   &:hover,
   &:focus {
-    color:$white;
+    color:$white !important;
     background-color: $aqua1;
     border: 2px solid $aqua1;
   } // end hover
@@ -101,4 +107,10 @@ and it will create a button dependant on those variables.
     line-height: 40px;
     font-size: 13px;
     text-transform: none;
+}
+
+.x-sm {
+  line-height: 25px;
+  font-size: 10px;
+  padding: 0 11px;
 }

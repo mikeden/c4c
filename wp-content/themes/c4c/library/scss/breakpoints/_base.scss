@@ -77,10 +77,20 @@ style a page via class
 LAYOUT & GRID STYLES
 *********************/
 .wrap {
-	width: 94%;
+	width: $wrap-width;
 	max-width: 1600px;
 	margin: 0 auto;
 	position: relative;
+
+	&.full-mobile {
+		width: 100%;
+	}
+
+	&.full-wrap {
+		width: $wrap-width;
+	}
+
+
 }
 
 .videoWrapper {
@@ -109,6 +119,7 @@ LAYOUT & GRID STYLES
 	display:block;
 	width: 100%;
 	padding-top: 30px;
+	padding-bottom: 50px;
 
 	h4 {
 		font-size: 14px;
@@ -162,6 +173,20 @@ LAYOUT & GRID STYLES
 			width: 130px;
 		}
 	}
+}
+
+.standard-left-padd {
+	display:block;
+
+	&.section-callout {
+		padding-top: 30px;
+		padding-bottom: 80px;
+	}
+}
+
+.sc-player {
+	margin-top: 90px;
+	margin-bottom: 30px;
 }
 
 /*********************
@@ -240,6 +265,164 @@ HOME STYLES
 }
 
 /*********************
+CONVERSATION STYLES
+*********************/
+
+.convo {
+	padding-bottom: 40px;
+	.photo {
+		display:block;
+		width: 100%;
+		padding-bottom: 65%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin: 2% 0 6% 0;
+		width: 98%;
+		float: left;
+	}
+
+	p.quote {
+		color:$aqua1;
+		font-size: 20px;
+	}
+
+	p.caption {
+		font-family: $galano;
+		font-size: 12px;
+	}
+
+	&.c2 {
+		
+		p.quote {
+			padding-right:0;
+			padding-left: 10%;
+			text-align: right;
+		}
+
+		p.caption {
+			text-align: right;
+		}
+
+		a {
+			float: right;
+		}
+
+		.photo {
+			width: 86%;
+			float:right;
+		}
+	}
+}
+
+
+.single-conversations {
+
+	p {
+		font-size: 18px;
+	}
+	
+	.c-header {
+
+		h1 {
+			padding-top: 100px; 
+			font-size: 25px;
+		}
+
+		.caption {
+			font-family: $galano;
+			color:$aqua1;
+			font-size: 12px;
+		}
+
+		.photo {
+			display:block;
+			width: 100%;
+			padding-bottom: 55%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			margin-top: 10%;
+			margin-bottom: 5%;
+		}
+	}
+
+	p.tags {
+		padding-top: 20px;
+	}
+
+	.copy {
+		padding: 50px 0 40px 0;
+	}
+}
+
+/*********************
+SERIES STYLES
+*********************/
+
+.featured-series {
+
+	padding-bottom: 40px;
+
+	.header-wrap {
+		display: block;
+		width: 100%;
+		position: relative;
+		padding-top: 140px;
+	}
+	
+	.bg-photo {
+		display:block;
+		width: 100%;
+		height: 565px;
+		margin: 0 auto;
+		position: relative;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+
+	}
+
+	.copy {
+		display:block;
+		width: 100%;
+		background: $white;
+		top:-140px;
+		padding: 40px;
+		position: absolute;
+		z-index: 2;
+
+		h1 {
+			padding-bottom: 0;
+			line-height: 1em;
+		}
+
+		.location {
+			font-family: $galano;
+			font-weight: 600;
+			color:$aqua1;
+			font-size: 12px;
+			padding-bottom: 40px;
+		}
+
+		p.link {
+			padding-top: 70px;
+		}
+
+		
+	}
+
+	.photo-caption {
+		text-align: right;
+		font-size: 12px;
+		font-family: $galano;
+		font-weight: 600;
+		padding-top: 16px;
+		padding-right: 3%;
+	}
+
+
+}
+
+/*********************
 LINK STYLES
 *********************/
 
@@ -286,6 +469,24 @@ a.alt1 {
 	}
 }
 
+a.section-links {
+	font-family: $garamond-capt;
+	color: $text-color;
+	font-size: 16px;
+	text-decoration: none;
+	border-bottom: 2px solid $text-color;
+	font-weight: 600;
+
+	&:hover {
+		color: $text-color;
+		border-bottom: 2px solid $aqua1;
+	}
+
+	&.sm {
+		font-size: 16px;
+	}
+}
+
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
@@ -306,9 +507,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 h1, .h1 {
-	font-size: 2.5em;
+	font-size: 25px;
 	line-height: 1.333em;
-	padding: 0 0 .7em 0;
+	padding: 0 0 .2em 0;
 }
 
 h2, .h2 {
@@ -338,6 +539,13 @@ p {
 	font-size: 16px;
 	margin:0;
 	padding: 0 0 .7em 0;
+}
+
+p.helper {
+	font-size: 12px;
+	font-family: $galano;
+	font-weight: 600;
+	color:$aqua1;
 }
 
 /*********************
@@ -1109,7 +1317,7 @@ COMMENT STYLES
 
 	/* comment reply link */
 	.comment-reply-link {
-		@extend .blue-btn;
+		@extend .aqua-btn;
 		font-size: 0.9em;
 		float: right;
 
@@ -1165,7 +1373,7 @@ COMMENT FORM STYLES
 
 	/* comment submit button */
 	#submit {
-		@extend .blue-btn;
+		@extend .aqua-btn;
 		float: right;
 		font-size: 1em;
 	}

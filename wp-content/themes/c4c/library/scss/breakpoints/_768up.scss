@@ -25,16 +25,38 @@ p {
 	font-size: 18px;
 }
 
+a.section-links {
+	font-size: 18px;
+
+	&.sm {
+		font-size: 18px;
+	}
+}
+
+p.helper {
+	font-size: 13px;
+}
+
+h1, .h1 {
+	font-size: 32px;
+}
+
 /*********************
 LAYOUT & GRID STYLES
 *********************/
 
-.wrap {
-	width: 94.3%;
-}
-
 #content {
 	margin-top: 1.5em;
+}
+
+.wrap {
+	&.full-mobile {
+		
+	}
+
+	&.wrap-full {
+		width: 100%;
+	}
 }
 
 /*********************
@@ -87,6 +109,10 @@ HEADER STYLES
 
 
 
+/*********************
+GENERAL STYLES
+*********************/
+
 .videoWrapper {
 	width:94%;
 	max-width: 1600px;
@@ -94,21 +120,41 @@ HEADER STYLES
 }
 
 .page-subhead {
+
+	padding-bottom: 100px;
 	
 	h4 {
 		font-size: 16px;
-		margin-left: 11%;
+		margin-left: $left-padd;
 	}
 
 	.top-line {
 
 		.highlight {
 			border-left: 3px solid $white;
-			margin-left: 11%;
+			margin-left: $left-padd;
 
 		}
 
 	}
+}
+
+.standard-left-padd {
+	 padding-left: $left-padd;
+
+
+	 &.section-callout {
+	 	padding-top: 80px;
+		padding-bottom: 180px;
+	}
+
+	&.add-right {
+		padding-right: $left-padd;
+	}
+}
+
+.w75 {
+	width: 75%;
 }
 
 /*********************
@@ -139,6 +185,73 @@ HOME STYLES
 	margin-left: 50%;
 }
 
+/*********************
+CONVERSATION STYLES
+*********************/
+
+.convo {
+	p.quote {
+		font-size: 26px;
+		padding-right: 8%;
+	}
+
+	p.caption {
+		font-family: $galano;
+		font-size: 13px;
+	}
+
+	&.c2 {
+		padding-top: 8%;
+		p.quote {
+			padding-left: 28%;
+		}
+	}
+}
+
+.single-conversations {
+
+	p {
+		font-size: 21px;
+	}
+	
+	.c-header {
+		h1 {
+			font-size: 32px;
+			padding-right: 35%;
+		}
+
+		.caption {
+			font-size: 18px;
+		}
+
+
+	}
+}
+
+/*********************
+SERIES STYLES
+*********************/
+
+.featured-series {
+
+	.bg-photo {
+
+	}
+
+	.location {
+		font-size: 13px;
+	}
+
+	.photo-caption {
+		font-size: 13px;
+		padding-right: 10%;
+	}
+
+	.copy {
+		width: 40%;
+		left: 8%;
+	}
+}
 
 
 /*********************

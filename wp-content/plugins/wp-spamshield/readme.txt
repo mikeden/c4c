@@ -106,6 +106,7 @@ If you have any issues with the plugin, we are here to help. Simply submit a sup
 * Indonesian (id_ID)
 * Italian (it_IT)
 * Serbian (sr_RS)
+* Swedish (sv_SE)
 
 If you would like to help translate, please [get in touch with us](https://www.redsandmarketing.com/contact/).
 
@@ -299,6 +300,18 @@ If you have any further questions, please submit them on the main [WP-SpamShield
 10. Widget - WP-SpamShield Counter - Graphic: Style 9
 
 == Changelog ==
+
+= 1.9.9.9.9 =
+*released 05/14/17*
+
+* Made various code enhancements and improvements.
+* Added mitigation for CVE-2017-8295, the zero-day exploit that affects all versions of WordPress to date, including version 4.7.4 and lower. Now, all WP-SpamShield users are protected.
+* Added a number of preemptive security enhancements.
+* Added a note with clarification to the WP-SpamShield Security Alerts.
+* Removed support for CommentLuv plugin as it is an abandoned plugin.
+* Added new spam filters to the algorithm.
+* Improved some filters in the anti-spam algorithm.
+* Maintenance: Updated existing spam filters.
 
 = 1.9.9.9.8 =
 *released 04/21/17*
@@ -527,7 +540,7 @@ If you have any further questions, please submit them on the main [WP-SpamShield
 *released 05/30/16*
 
 * Made various code enhancements and improvements.
-* Pre-emptive security enhancements.
+* Preemptive security enhancements.
 * Updated the anti spam filters.
 
 = 1.9.8.3 =
@@ -600,7 +613,7 @@ If you have any further questions, please submit them on the main [WP-SpamShield
 * Fixed a backwards compatibility issue with new user notification emails on old WordPress versions (lower than 4.3).
 * Minor translation improvements. Switched some of the translation strings to use WordPress' built in translations in order to not duplicate efforts. This will allow some of the documentation and text to be translated even if the plugin doesn't have a translation for that language yet. For example, registration forms will now be fully translated in every language that WordPress has a translation for.
 * Compatibility improvements for surrogates (gateway caches/reverse proxies, see RFC 3040).
-* Pre-emptive security enhancements.
+* Preemptive security enhancements.
 * Updated the anti spam filters.
 
 = 1.9.7.3 =
@@ -706,7 +719,7 @@ If you have any further questions, please submit them on the main [WP-SpamShield
 * Compatibility fix for Vantage theme by Appthemes.
 * Added workarounds for two plugins on the [Known Conflicts list](https://www.redsandmarketing.com/plugins/wp-spamshield/known-conflicts/): Affiliates, and New User Approve.
 * Made various other preemptive compatibility enhancements.
-* Pre-emptive security enhancements.
+* Preemptive security enhancements.
 * The log file can now be viewed by more than one administrator at a time.
 * Improved image optimization and file size reduction. Ran all plugin images though better lossless image compression to further reduce file size, for a total images file size reduction of 22%, and plugin package file size reduction of 15%. Plugin images were previously optimized, but new apps provide us with greatly improved lossless compression.
 * Made various code enhancements and improvements.
@@ -830,7 +843,7 @@ If you have any further questions, please submit them on the main [WP-SpamShield
 *released 06/15/15*
 
 * Added several improvements to the integration with ecommerce plugins.
-* Pre-emptive security enhancement for the log file (formerly `temp-comments-log.txt`) - added a randomly generated 32 character long key to the filename to make it unique (now `temp-comments-log-{random key}.txt`). The log was already protected by an `.htaccess` file and restricted to the IP address of the admin.
+* Preemptive security enhancement for the log file (formerly `temp-comments-log.txt`) - added a randomly generated 32 character long key to the filename to make it unique (now `temp-comments-log-{random key}.txt`). The log was already protected by an `.htaccess` file and restricted to the IP address of the admin.
 * Made various code improvements.
 * Improved some of the filters in the anti-spam algorithm.
 * Updated the anti-spam filters.
@@ -1023,7 +1036,7 @@ If you have any further questions, please submit them on the main [WP-SpamShield
 For a complete list of changes to the plugin, view the [Changelog](https://www.redsandmarketing.com/plugins/wp-spamshield/changelog/).
 
 == Upgrade Notice ==
-= 1.9.9.9.8 =
+= 1.9.9.9.9 =
 
-* Made various code enhancements/improvements, fixed a WooCommerce 3.0+ compatibility bug, and updated the spam filters. Please see Changelog for details.
+* Made various code enhancements/improvements, added mitigation for CVE-2017-8295 zero-day WordPress exploit, improved/updated the spam filters, and more. Please see Changelog for details.
 

@@ -6,7 +6,7 @@
 
 				<div class="home-wrapper">
 					<div class="videoWrapper">
-						<iframe src="https://player.vimeo.com/video/2379456?autoplay=1&loop=1&byline=0&title=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						<iframe src="https://player.vimeo.com/video/13008175?autoplay=0&loop=1&byline=0&title=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 					</div>
 				</div>
 
@@ -19,8 +19,7 @@
 						<h1><a href="series/" class="alt1">Series</a></h1>
 						<h1><a href="journal/" class="alt1">Journal</a></h1>
 						<div class="hr"></div>
-						<p>Challenge for Change uses listening and the democratic power of media to foster connections and strengthen relationships between people and communities. </p>
-						<p>Along the way, we are telling some pretty amazing stories.</p>
+						<?php the_field('intro'); ?>
 					</div>
 
 					<div class="radio-callout">
@@ -43,7 +42,9 @@
 						<h4>Recent Conversations</h4>
 					</div>
 
-							<?php query_posts(array(
+							<?php 
+							$i = 1;
+							query_posts(array(
 							'posts_per_page' => 2,
 							'post_type' => 'conversations',
 							'orderby' => 'post_date',
@@ -56,24 +57,27 @@
 
 							<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-							<div id="post-<?php the_ID(); ?>" class="cpt">
-								<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-							</div>
+								<div class="convo m-all t-1of2 d-1of2 c<?php echo $i ?>">
+									<p class="caption"><?php the_field('caption'); ?></p>
+									<?php $image = get_field('photo');
+									if( !empty($image) ): ?>
+										<div class="photo" style="background-image:url(<?php echo $image['url']; ?>)"></div>
+										<div class="clearfix"></div>
+									<?php endif; ?>
+									<p class="quote"><?php the_field('quote'); ?></p>
+									<a href="<?php the_permalink() ?>" class="white-btn">Listen</a>
+									<div class="clearfix"></div>
+									<?php $i++ ;?>
+								</div>
 
 							<?php endwhile; ?>
 
 							<?php wp_reset_query(); ?> 
 
+							<div class="clearfix"></div>
 
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum ultricies pulvinar. Pellentesque quis metus interdum, pharetra enim et, mollis augue. Etiam at nisi lorem. Aenean in erat est. Praesent faucibus fringilla est non posuere. Duis aliquet augue vel tortor viverra tempus. Phasellus vestibulum iaculis quam in luctus. In laoreet nibh vitae est suscipit varius et eu tortor. Praesent dignissim id quam a porta. Integer et ipsum imperdiet, placerat mi tempor, mollis enim. Curabitur dui dolor, bibendum et ullamcorper quis, consequat sit amet nibh. Nullam venenatis diam mauris, ut semper ante pretium sed.
-					</p>
-					<p>
-						Sed finibus magna sit amet eleifend mattis. Praesent in purus at orci gravida cursus eget eu ex. Aliquam in turpis quis neque rhoncus dapibus sit amet quis ante. Nulla volutpat arcu sed euismod mollis. Aliquam imperdiet ac ipsum et iaculis. Phasellus sit amet felis vel turpis aliquet tempus eget vel elit. Nullam nec felis congue, ultrices ipsum quis, posuere sem. Nullam vitae viverra mi, volutpat finibus quam. Morbi sed urna ligula. Fusce tincidunt magna tempus purus hendrerit, in gravida lectus blandit. Aenean sem arcu, luctus non nunc sit amet, condimentum tempus arcu. Aliquam varius id justo at aliquet. Aliquam cursus sollicitudin justo id pulvinar. Quisque non augue id augue euismod viverra. Integer pharetra, ligula eget pretium viverra, nisl turpis facilisis odio, at blandit nisl est nec dui.
-					</p>
-					<pp>
-						Nam aliquam eleifend quam, ac mollis justo convallis at. Proin justo nisi, pretium sit amet ligula sed, sodales imperdiet ligula. Sed ac metus quis magna accumsan interdum. Nam nec aliquet mi, in pharetra augue. Donec pretium convallis consectetur. Sed non varius dolor. Proin non aliquam neque, vitae euismod velit. Vivamus tincidunt dui quam, in porta quam pretium rhoncus. Vestibulum augue justo, dignissim quis erat non, dictum sodales massa.
-					</p>
+							<div class="standard-left-padd section-callout"><a href="conversations/" class="section-links">Explore all conversations</a></div>
+					
 
 					<div class="page-subhead l100">
 						<div class="top-line">
@@ -81,6 +85,65 @@
 							<div class="highlight"></div>
 						</div>
 						<h4>Featured Series</h4>
+					</div>
+				</div>
+
+				<div class="wrap">
+					
+					<?php 
+						$categories = get_categories(array(
+							'taxonomy' => 'story_series',
+							'post_type' => 'story',
+							'hide_empty'=>0
+							
+							));
+						foreach ($categories as $category) : ?>
+							<?php 
+								$featured = get_field('featured', $category);
+								if ($featured == 1) {
+							?>
+
+							<?php $copy = get_field('copy', $category); ?>
+							<?php $location = get_field('location', $category); ?>
+							<?php $caption = get_field('image_caption', $category); ?>
+							<?php $photo = get_field('image', $category); ?>
+
+							<div class="featured-series">
+								<div class="header-wrap">
+									<div class="wrap wrap-full">
+										<div class="copy">
+											<h1><?php echo $category->name; ?></h1>
+											<p class="location"><?php echo $location ?></p>
+											<?php echo $copy ?>
+											<p class="link">
+												<a href="./<?php echo $category->slug; ?>" class="section-links sm">Explore series</a>
+											</p>
+										</div>
+									</div>
+									<div class="bg-photo" style="background-image: url(<?php echo $photo ?>)"></div>
+									<p class="photo-caption"><?php echo $caption ?></p>
+								</div>
+							</div>
+
+							
+
+							<? break; } ?>
+
+	    			<?php endforeach; ?>
+				</div>
+
+				<div class="wrap cf">
+					<div class="standard-left-padd section-callout"><a href="journal/" class="section-links">Explore all series</a></div>
+				</div>
+
+				<div class="wrap cf">
+
+					<div class="page-subhead l130">
+						<div class="top-line">
+							<div class="bg"></div>
+							<div class="highlight"></div>
+						</div>
+						<h4>From the Journal</h4>
 					</div>
 
 					<div class="page-subhead l130">
@@ -99,7 +162,16 @@
 						<h4>C4C Radio</h4>
 					</div>
 
-					<iframe width="100%" height="300" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/224785489&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
+					<div class="standard-left-padd add-right">
+						<h1>Play and Go</h1>
+						<p class="helper">C4C Radio gives you every C4C Conversation in one convinient playlist.</p>
+						<iframe width="100%" height="300" class="sc-player" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/224785489&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
+
+					</div>
+
+					<div class="standard-left-padd section-callout"><a href="conversations/" class="section-links">Explore all convesations</a></div>
+
+					
 
 				</div>
 
