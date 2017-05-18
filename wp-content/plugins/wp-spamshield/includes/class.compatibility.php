@@ -1,7 +1,7 @@
 <?php
 /**
  *  WP-SpamShield Compatibility
- *  File Version 1.9.9.9.9
+ *  File Version 1.9.10
  */
 
 /* Make sure file remains secure if called directly */
@@ -512,7 +512,7 @@ final class WPSS_Compatibility extends WP_SpamShield {
 	/**
 	 *	Check for Surrogates
 	 *	- Server Caching, Reverse Poxies, WAFS: Varnish, Cloudflare (Rocket Loader), Sucuri WAF, Incapsula, etc.
-	 *	- Specific web hosts that use Varnish: WP Engine, Dreamhost, SiteGround, Bluehost, GoDaddy, Lightning Base...
+	 *	- Specific web hosts that use aggressive caching (eg. Varnish or other): WP Engine, Dreamhost, SiteGround, Bluehost, GoDaddy, Lightning Base, Pagely, ...
 	 *	@dependencies	WPSS_Utils::get_ip_dns_params(), WPSS_Utils::get_web_host(), WP_SpamShield::update_option(), WP_SpamShield::is_varnish_active()(), WP_SpamShield::get_option(), ...
 	 *	@since			1.9.9.5
 	 */
@@ -521,7 +521,7 @@ final class WPSS_Compatibility extends WP_SpamShield {
 		if( isset( $wpss_surrogate ) && is_bool( $wpss_surrogate ) ) { return $wpss_surrogate; }
 		$wpss_surrogate	= FALSE;
 		$web_host		= WPSS_Utils::get_web_host( WPSS_Utils::get_ip_dns_params() );
-		if( ( !empty( $web_host ) && ( $web_host === 'WP Engine' || $web_host === 'Dreamhost' || $web_host === 'SiteGround' || $web_host === 'Bluehost' || $web_host === 'GoDaddy' || $web_host === 'Lightning Base' ) ) || self::is_varnish_active() || self::is_lscache_active() ) {
+		if( ( !empty( $web_host ) && ( $web_host === 'WP Engine' || $web_host === 'Dreamhost' || $web_host === 'SiteGround' || $web_host === 'Bluehost' || $web_host === 'GoDaddy' || $web_host === 'Lightning Base' || $web_host === 'Pagely' ) ) || self::is_varnish_active() || self::is_lscache_active() ) {
 			$wpss_surrogate	= TRUE;
 			WP_SpamShield::update_option( array( 'surrogate' => $wpss_surrogate ) ); return TRUE;
 		}

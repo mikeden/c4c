@@ -443,24 +443,28 @@ CONVERSATION STYLES
   font-size: 13px;
 }
 /* line 203, ../scss/breakpoints/_768up.scss */
-.convo.c2 {
+.convo.even {
   padding-top: 8%;
 }
 /* line 205, ../scss/breakpoints/_768up.scss */
-.convo.c2 p.quote {
+.convo.even p.quote {
   padding-left: 28%;
 }
 
-/* line 213, ../scss/breakpoints/_768up.scss */
+/* line 215, ../scss/breakpoints/_768up.scss */
 .single-conversations p {
   font-size: 21px;
 }
 /* line 218, ../scss/breakpoints/_768up.scss */
+.single-conversations p.comment-notes {
+  font-size: 18px;
+}
+/* line 224, ../scss/breakpoints/_768up.scss */
 .single-conversations .c-header h1 {
   font-size: 32px;
   padding-right: 35%;
 }
-/* line 223, ../scss/breakpoints/_768up.scss */
+/* line 229, ../scss/breakpoints/_768up.scss */
 .single-conversations .c-header .caption {
   font-size: 18px;
 }
@@ -468,40 +472,116 @@ CONVERSATION STYLES
 /*********************
 SERIES STYLES
 *********************/
-/* line 241, ../scss/breakpoints/_768up.scss */
+/* line 247, ../scss/breakpoints/_768up.scss */
 .featured-series .location {
   font-size: 13px;
 }
-/* line 245, ../scss/breakpoints/_768up.scss */
+/* line 251, ../scss/breakpoints/_768up.scss */
 .featured-series .photo-caption {
   font-size: 13px;
   padding-right: 10%;
 }
-/* line 250, ../scss/breakpoints/_768up.scss */
+/* line 256, ../scss/breakpoints/_768up.scss */
 .featured-series .copy {
   width: 40%;
   left: 8%;
 }
 
+/* line 264, ../scss/breakpoints/_768up.scss */
+.series-index .even .copy {
+  left: auto;
+  right: 8%;
+}
+
+/* line 274, ../scss/breakpoints/_768up.scss */
+.stories-list .story-item h2 {
+  font-size: 21px;
+}
+/* line 279, ../scss/breakpoints/_768up.scss */
+.stories-list .story-item.v1 .photo {
+  width: 80%;
+}
+/* line 285, ../scss/breakpoints/_768up.scss */
+.stories-list .story-item.v2 .photo {
+  width: 90%;
+}
+/* line 291, ../scss/breakpoints/_768up.scss */
+.stories-list .story-item.v3 .photo {
+  width: 95%;
+}
+/* line 296, ../scss/breakpoints/_768up.scss */
+.stories-list .story-item .hr {
+  display: block;
+  width: 80%;
+  height: 1px;
+}
+/* line 303, ../scss/breakpoints/_768up.scss */
+.stories-list .left-column {
+  padding-right: 5%;
+}
+/* line 306, ../scss/breakpoints/_768up.scss */
+.stories-list .left-column h2, .stories-list .left-column p {
+  text-align: right;
+  padding-left: 20%;
+}
+/* line 311, ../scss/breakpoints/_768up.scss */
+.stories-list .left-column p {
+  padding-left: 20%;
+}
+/* line 315, ../scss/breakpoints/_768up.scss */
+.stories-list .left-column .photo {
+  float: right;
+}
+/* line 321, ../scss/breakpoints/_768up.scss */
+.stories-list .left-column .story-item:last-child .hr {
+  display: none;
+}
+/* line 326, ../scss/breakpoints/_768up.scss */
+.stories-list .left-column .hr {
+  float: right;
+}
+/* line 331, ../scss/breakpoints/_768up.scss */
+.stories-list .right-column {
+  padding-top: 115px;
+  padding-left: 5%;
+}
+/* line 335, ../scss/breakpoints/_768up.scss */
+.stories-list .right-column h2, .stories-list .right-column p {
+  text-align: left;
+  padding-right: 20%;
+}
+/* line 340, ../scss/breakpoints/_768up.scss */
+.stories-list .right-column p {
+  padding-right: 20%;
+}
+/* line 344, ../scss/breakpoints/_768up.scss */
+.stories-list .right-column .photo {
+  float: left;
+}
+/* line 349, ../scss/breakpoints/_768up.scss */
+.stories-list .right-column .story-item:last-child .hr {
+  display: none;
+}
+
 /*********************
 NAVIGATION STYLES
 *********************/
-/* line 262, ../scss/breakpoints/_768up.scss */
+/* line 362, ../scss/breakpoints/_768up.scss */
 .slicknav_menu {
   display: none;
 }
 
-/* line 266, ../scss/breakpoints/_768up.scss */
+/* line 366, ../scss/breakpoints/_768up.scss */
 .logo.mobile-logo {
   display: none;
 }
 
-/* line 270, ../scss/breakpoints/_768up.scss */
+/* line 370, ../scss/breakpoints/_768up.scss */
 .header {
   display: block;
 }
 
-/* line 274, ../scss/breakpoints/_768up.scss */
+/* line 374, ../scss/breakpoints/_768up.scss */
 .nav {
   border-top: 2px solid #589ca6;
   margin-top: 12px;
@@ -509,21 +589,21 @@ NAVIGATION STYLES
   /* highlight current page */
   /* end current highlighters */
 }
-/* line 278, ../scss/breakpoints/_768up.scss */
+/* line 378, ../scss/breakpoints/_768up.scss */
 .nav.footer-nav {
   border: none;
 }
-/* line 280, ../scss/breakpoints/_768up.scss */
+/* line 380, ../scss/breakpoints/_768up.scss */
 .nav.footer-nav li {
   float: none;
 }
-/* line 286, ../scss/breakpoints/_768up.scss */
+/* line 386, ../scss/breakpoints/_768up.scss */
 .nav ul {
   background: black;
   margin-top: 0;
   overflow: visible;
 }
-/* line 292, ../scss/breakpoints/_768up.scss */
+/* line 392, ../scss/breakpoints/_768up.scss */
 .nav li {
   float: left;
   position: relative;
@@ -533,7 +613,7 @@ NAVIGATION STYLES
   */
   /* showing sub-menus */
 }
-/* line 297, ../scss/breakpoints/_768up.scss */
+/* line 397, ../scss/breakpoints/_768up.scss */
 .nav li a {
   border-bottom: 0;
   color: #589ca6;
@@ -549,18 +629,18 @@ NAVIGATION STYLES
   has the possibility of being a mobile device.
   */
 }
-/* line 312, ../scss/breakpoints/_768up.scss */
+/* line 412, ../scss/breakpoints/_768up.scss */
 .nav li a:hover, .nav li a:focus {
   color: #589ca6;
   text-decoration: none;
   background: white;
 }
-/* line 317, ../scss/breakpoints/_768up.scss */
+/* line 417, ../scss/breakpoints/_768up.scss */
 .nav li a:hover .highlight, .nav li a:focus .highlight {
   background: #94c1c2;
   opacity: 1;
 }
-/* line 323, ../scss/breakpoints/_768up.scss */
+/* line 423, ../scss/breakpoints/_768up.scss */
 .nav li a .highlight {
   opacity: 0;
   width: 96%;
@@ -576,11 +656,11 @@ NAVIGATION STYLES
   -moz-transition: opacity .15s ease-in-out;
   -webkit-transition: opacity .15s ease-in-out;
 }
-/* line 346, ../scss/breakpoints/_768up.scss */
+/* line 446, ../scss/breakpoints/_768up.scss */
 .nav li.current-menu-item a .highlight {
   opacity: 1;
 }
-/* line 356, ../scss/breakpoints/_768up.scss */
+/* line 456, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu,
 .nav li ul.children {
   margin-top: 0;
@@ -591,7 +671,7 @@ NAVIGATION STYLES
   z-index: 8999;
   /* highlight sub-menu current page */
 }
-/* line 364, ../scss/breakpoints/_768up.scss */
+/* line 464, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li,
 .nav li ul.children li {
   /*
@@ -600,7 +680,7 @@ NAVIGATION STYLES
   for usability. k, bai.
   */
 }
-/* line 366, ../scss/breakpoints/_768up.scss */
+/* line 466, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
   padding-left: 10px;
@@ -609,40 +689,40 @@ NAVIGATION STYLES
   width: 180px;
   border-bottom: 1px solid #ccc;
 }
-/* line 383, ../scss/breakpoints/_768up.scss */
+/* line 483, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li:last-child a,
 .nav li ul.children li:last-child a {
   border-bottom: 0;
 }
-/* line 393, ../scss/breakpoints/_768up.scss */
+/* line 493, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li ul,
 .nav li ul.children li ul {
   top: 0;
   left: 100%;
 }
-/* line 408, ../scss/breakpoints/_768up.scss */
+/* line 508, ../scss/breakpoints/_768up.scss */
 .nav li:hover > ul {
   top: auto;
   visibility: visible;
 }
 
 /* end .nav */
-/* line 426, ../scss/breakpoints/_768up.scss */
+/* line 526, ../scss/breakpoints/_768up.scss */
 .post-type-archive-conversations .menu-item-17 a .highlight {
   opacity: 1;
 }
 
-/* line 432, ../scss/breakpoints/_768up.scss */
+/* line 532, ../scss/breakpoints/_768up.scss */
 .single-post .current_page_parent a .highlight {
   opacity: 1;
 }
 
-/* line 438, ../scss/breakpoints/_768up.scss */
+/* line 538, ../scss/breakpoints/_768up.scss */
 .single-conversations .menu-item-17 a .highlight {
   opacity: 1;
 }
 
-/* line 444, ../scss/breakpoints/_768up.scss */
+/* line 544, ../scss/breakpoints/_768up.scss */
 .social-menu.top-social {
   display: block;
 }
@@ -650,28 +730,28 @@ NAVIGATION STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 454, ../scss/breakpoints/_768up.scss */
+/* line 554, ../scss/breakpoints/_768up.scss */
 .sidebar {
   margin-top: 2.2em;
 }
 
-/* line 458, ../scss/breakpoints/_768up.scss */
+/* line 558, ../scss/breakpoints/_768up.scss */
 .widgettitle {
   border-bottom: 2px solid #444;
   margin-bottom: 0.75em;
 }
 
-/* line 463, ../scss/breakpoints/_768up.scss */
+/* line 563, ../scss/breakpoints/_768up.scss */
 .widget {
   padding: 0 10px;
   margin: 2.2em 0;
 }
-/* line 468, ../scss/breakpoints/_768up.scss */
+/* line 568, ../scss/breakpoints/_768up.scss */
 .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
 }
-/* line 476, ../scss/breakpoints/_768up.scss */
+/* line 576, ../scss/breakpoints/_768up.scss */
 .widget ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
@@ -696,7 +776,12 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 584, ../scss/breakpoints/_768up.scss */
+/* line 683, ../scss/breakpoints/_768up.scss */
+.footer {
+  margin-top: 150px;
+}
+
+/* line 688, ../scss/breakpoints/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.
@@ -765,6 +850,11 @@ SERIES STYLES
 /* line 68, ../scss/breakpoints/_1030up.scss */
 .featured-series .copy {
   width: 32%;
+}
+
+/* line 77, ../scss/breakpoints/_1030up.scss */
+.stories-list .story-item h2 {
+  font-size: 25px;
 }
 
 /*

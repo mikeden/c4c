@@ -44,7 +44,7 @@ msgid "Comments are closed."
 msgstr ""
 
 #: comments.php:70
-msgid "Leave a Reply"
+msgid "Join the Conversation"
 msgstr ""
 
 #: comments.php:70

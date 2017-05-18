@@ -209,10 +209,11 @@ function bones_comments( $comment, $args, $depth ) {
         <?php
           // create variable
           $bgauthemail = get_comment_author_email();
+          $name = get_comment_author_link();
         ?>
-        <img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=40" class="load-gravatar avatar avatar-48 photo" height="40" width="40" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
+        
         <?php // end custom gravatar call ?>
-        <?php printf(__( '<cite class="fn">%1$s</cite> %2$s', 'bonestheme' ), get_comment_author_link(), edit_comment_link(__( '(Edit)', 'bonestheme' ),'  ','') ) ?>
+        <?php printf(__( '<cite class="fn">%1$s</cite> %2$s', 'bonestheme' ), $name, edit_comment_link(__( '(Edit)', 'bonestheme' ),'  ','') ) ?>
         <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'bonestheme' )); ?> </a></time>
 
       </header>
@@ -341,6 +342,15 @@ function create_tag_taxonomies()
         )  
     );
 }
+
+add_filter( 'pre_get_posts', 'be_archive_query' );
+// @link http://www.billerickson.net/customize-the-wordpress-query/
+function be_archive_query( $query ) {
+  if( $query->is_main_query() && $query->is_post_type_archive('conversations') ) {
+    $query->set( 'posts_per_page', 4 );
+  }
+}
+
 
 
 

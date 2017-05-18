@@ -200,18 +200,24 @@ CONVERSATION STYLES
 		font-size: 13px;
 	}
 
-	&.c2 {
+	&.even {
 		padding-top: 8%;
 		p.quote {
 			padding-left: 28%;
 		}
 	}
+
 }
+
 
 .single-conversations {
 
 	p {
 		font-size: 21px;
+
+		&.comment-notes {
+			font-size: 18px;
+		}
 	}
 	
 	.c-header {
@@ -250,6 +256,100 @@ SERIES STYLES
 	.copy {
 		width: 40%;
 		left: 8%;
+	}
+}
+
+.series-index {
+	.even {
+		.copy {
+			left: auto;
+			right: 8%;
+		}
+	}
+}
+
+.stories-list {
+
+	.story-item {
+		h2 {
+			font-size: 21px;
+		}
+
+		&.v1 {
+			.photo {
+				width: 80%;
+			}
+		}
+
+		&.v2 {
+			.photo {
+				width: 90%;
+			}
+		}
+
+		&.v3 {
+			.photo {
+				width: 95%;
+			}
+		}
+
+		.hr {
+			display:block;
+			width: 80%;
+			height: 1px;
+		}
+	}
+
+	.left-column {
+		padding-right: 5%;
+
+		h2, p {
+			text-align: right;
+			padding-left: 20%;
+		}
+
+		p {
+			padding-left: 20%;
+		}
+
+		.photo {
+			float: right;
+		}
+
+
+		.story-item:last-child {
+			.hr {
+				display:none;
+			}
+		}
+
+		.hr {
+			float: right;
+		}
+	}
+
+	.right-column {
+		padding-top: 115px;
+		padding-left: 5%;
+
+		h2, p {
+			text-align: left;
+			padding-right: 20%;
+		}
+
+		p {
+			padding-right: 20%;
+		}
+
+		.photo {
+			float: left;
+		}
+
+		.story-item:last-child {
+			.hr {
+				display:none;
+			}
+		}
 	}
 }
 
@@ -579,6 +679,10 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
+
+.footer {
+	margin-top: 150px;
+}
 .footer-links {
 	ul {
 		li {

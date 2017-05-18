@@ -42,6 +42,8 @@
 						<h4>Recent Conversations</h4>
 					</div>
 
+					<div class="convo-posts">
+
 							<?php 
 							$i = 1;
 							query_posts(array(
@@ -57,7 +59,13 @@
 
 							<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-								<div class="convo m-all t-1of2 d-1of2 c<?php echo $i ?>">
+								<?php if ($i % 2 == 0) { 
+									$elem = 'even'; 
+								} else { 
+									$elem = 'odd'; 
+								};  ?>
+
+								<div class="convo m-all t-1of2 d-1of2 c<?php echo $i ?> <?php echo $elem ?>">
 									<p class="caption"><?php the_field('caption'); ?></p>
 									<?php $image = get_field('photo');
 									if( !empty($image) ): ?>
@@ -73,6 +81,8 @@
 							<?php endwhile; ?>
 
 							<?php wp_reset_query(); ?> 
+
+					</div>
 
 							<div class="clearfix"></div>
 
@@ -169,7 +179,7 @@
 
 					</div>
 
-					<div class="standard-left-padd section-callout"><a href="conversations/" class="section-links">Explore all convesations</a></div>
+					<div class="standard-left-padd section-callout"><a href="conversations/" class="section-links">Explore all conversations</a></div>
 
 					
 

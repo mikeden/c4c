@@ -31,7 +31,27 @@ on larger screens.
 SERIES STYLES
 *********************/
 
-.featured-series {
-	
+.stories-list {
 
+	.left-column {
+
+		h2, p {
+			padding-left: 40%;
+		}
+
+		p {
+			padding-left: 40%;
+		}
+	}
+
+	.right-column {
+
+		h2, p {
+			padding-right: 40%;
+		}
+
+		p {
+			padding-right: 40%;
+		}
+	}
 }

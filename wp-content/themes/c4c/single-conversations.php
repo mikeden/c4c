@@ -66,9 +66,23 @@
 
 							</div>
 
-							
+							<?php $num_comments = get_comments_number(); 
+								if ($num_comments > 0) { ?>
 
-							<?php comments_template(); ?>
+							<div class="page-subhead l130">
+								<div class="top-line">
+									<div class="bg"></div>
+									<div class="highlight"></div>
+								</div>
+								<h4><?php comments_number( 'No Comments', '1 Comment', '% Comments' ); ?></h4>
+							</div>
+
+							<?php } ?>
+
+							
+							<div class="standard-left-padd">
+								<?php comments_template(); ?>
+							</div>
 
 							
 
@@ -92,6 +106,60 @@
 
 						</main>
 
+					
+				</div>
+
+				<div class="wrap cf padd-top">
+
+					<div class="page-subhead">
+						<div class="top-line">
+							<div class="bg"></div>
+							<div class="highlight"></div>
+						</div>
+						<h4>Featured Conversations</h4>
+					</div>
+
+							<?php 
+							$i = 1;
+							query_posts(array(
+							'posts_per_page' => 2,
+							'post_type' => 'conversations',
+							'orderby' => 'post_date',
+							'meta_key' => 'featured_conversation', // the name of the custom field
+							'meta_compare' => '=', // the comparison (e.g. equals, does not equal, etc...)
+							'meta_value' => 1, // the value to which the custom field is compared. In my case, 'featured_product' was a true/false checkbox. If you had a custom field called 'color' and wanted to show only those blue items, then the meta_value would be 'blue'
+							'paged' => $paged
+							)
+							); ?>
+
+							<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+
+								<?php if ($i % 2 == 0) { 
+									$elem = 'even'; 
+								} else { 
+									$elem = 'odd'; 
+								};  ?>
+
+								<div class="convo m-all t-1of2 d-1of2 c<?php echo $i ?> <?php echo $elem ?>">
+									<p class="caption"><?php the_field('caption'); ?></p>
+									<?php $image = get_field('photo');
+									if( !empty($image) ): ?>
+										<div class="photo" style="background-image:url(<?php echo $image['url']; ?>)"></div>
+										<div class="clearfix"></div>
+									<?php endif; ?>
+									<p class="quote"><?php the_field('quote'); ?></p>
+									<a href="<?php the_permalink() ?>" class="white-btn">Listen</a>
+									<div class="clearfix"></div>
+									<?php $i++ ;?>
+								</div>
+
+							<?php endwhile; ?>
+
+							<?php wp_reset_query(); ?> 
+
+							<div class="clearfix"></div>
+
+							<div class="standard-left-padd section-callout"><a href="conversations/" class="section-links">Explore all conversations</a></div>
 					
 				</div>
 

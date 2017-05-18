@@ -4,63 +4,63 @@
 
 				<div id="inner-content" class="wrap cf">
 
-						<main id="main" class="m-all t-3of3 d-7of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" class="m-all t-3of3 d-7of7 cf series-index" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+								
+								<div class="standard-page-header">
+									<div class="standard-left-padd add-right">
+										<h1><?php the_title(); ?></h1>
 
-								<header class="article-header">
-
-									<h1 class="page-title" itemprop="headline">--- <?php the_title(); ?>  ---- </h1>
-
-								</header> <?php // end article header ?>
-
-								<section class="entry-content cf" itemprop="articleBody">
-									<?php
-										// the content (pretty self explanatory huh)
-										the_content();
-
-										/*
-										 * Link Pages is used in case you have posts that are set to break into
-										 * multiple pages. You can remove this if you don't plan on doing that.
-										 *
-										 * Also, breaking content up into multiple pages is a horrible experience,
-										 * so don't do it. While there are SOME edge cases where this is useful, it's
-										 * mostly used for people to get more ad views. It's up to you but if you want
-										 * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
-										 *
-										 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
-										 *
-										*/
-										wp_link_pages( array(
-											'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
-											'after'       => '</div>',
-											'link_before' => '<span>',
-											'link_after'  => '</span>',
-										) );
-									?>
+										<div class="intro">
+											<div class="hr"></div>
+											<?php the_content(); ?>
+										</div>
+									</div>
+								</div>
 
 
-									<?php 
-										$categories = get_categories('taxonomy=story_series&post_type=story&hide_empty=0');
-										foreach ($categories as $category) : ?>
-											<div>
-												<h3><a href="./<?php echo $category->slug; ?>"><?php echo $category->name; ?></a></h3>
-												<?php $copy = get_field('copy', $category); ?>
-												<?php echo $copy ?>
+								<?php 
+									$i = 1;
+									$categories = get_categories('taxonomy=story_series&post_type=story&hide_empty=0');
+									foreach ($categories as $category) : ?>
+
+										<?php $copy = get_field('copy', $category); ?>
+										<?php $location = get_field('location', $category); ?>
+										<?php $caption = get_field('image_caption', $category); ?>
+										<?php $photo = get_field('image', $category); ?>
+
+										<?php if ($i % 2 == 0) { 
+											$elem = 'even'; 
+										} else { 
+											$elem = 'odd'; 
+										};  ?>
+
+										<div class="featured-series <?php echo $elem ?>">
+											<div class="header-wrap">
+												<div class="wrap wrap-full">
+													<div class="copy">
+														<h1><?php echo $category->name; ?></h1>
+														
+														<p class="location"><?php echo $location ?></p>
+														<?php echo $copy ?>
+														<p class="link">
+															<a href="./<?php echo $category->slug; ?>" class="section-links sm">Explore series</a>
+														</p>
+													</div>
+												</div>
+												<div class="bg-photo" style="background-image: url(<?php echo $photo ?>)"></div>
+												<p class="photo-caption"><?php echo $caption ?></p>
 											</div>
-					    			<?php endforeach; ?>
+										</div>
 
-					    			<iframe width="100%" height="300" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/224785489&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
+										<?php $i++ ; ?>
 
-					    			<br/><br/>
+				    			<?php endforeach; ?>
 
 
-								</section> <?php // end article section ?>
- 
-
-							</article>
+								
 
 							<?php endwhile; endif; ?>
 

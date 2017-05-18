@@ -14,7 +14,7 @@ if ( post_password_required() ) {
 
   <?php if ( have_comments() ) : ?>
 
-    <h3 id="comments-title" class="h2"><?php comments_number( __( '<span>No</span> Comments', 'bonestheme' ), __( '<span>One</span> Comment', 'bonestheme' ), __( '<span>%</span> Comments', 'bonestheme' ) );?></h3>
+    <!--<h3 id="comments-title" class="h2"><?php comments_number( __( '<span>No</span> Comments', 'bonestheme' ), __( '<span>One</span> Comment', 'bonestheme' ), __( '<span>%</span> Comments', 'bonestheme' ) );?></h3>-->
 
     <section class="commentlist">
       <?php
@@ -46,5 +46,17 @@ if ( post_password_required() ) {
 
   <?php endif; ?>
 
-  <?php comment_form(); ?>
+  <?php $comments_args = array(
+        // Change the title of send button 
+        'label_submit' => __( 'Submit Comment', 'textdomain' ),
+        'title_reply_before' => __( '<h4 id="reply-title" class="comment-reply-title">', 'textdomain' ),
+        'title_reply_after' => __( '</h4>', 'textdomain' ),
+        // Change the title of the reply section
+        'title_reply' => __( 'Join the Conversation', 'textdomain' ),
+        // Remove "Text or HTML to be displayed after the set of comment fields".
+        'comment_notes_after' => '',
+        // Redefine your own textarea (the comment body).
+        'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><br /><textarea id="comment" name="comment" aria-required="true"></textarea></p>',
+);
+comment_form( $comments_args ); ?>
 

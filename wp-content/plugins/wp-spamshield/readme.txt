@@ -301,13 +301,20 @@ If you have any further questions, please submit them on the main [WP-SpamShield
 
 == Changelog ==
 
+= 1.9.10 =
+*released 05/17/17*
+
+* Made various code enhancements and improvements.
+* Improved some filters in the anti-spam algorithm.
+* Maintenance: Updated existing spam filters.
+
 = 1.9.9.9.9 =
 *released 05/14/17*
 
 * Made various code enhancements and improvements.
-* Added mitigation for CVE-2017-8295, the zero-day exploit that affects all versions of WordPress to date, including version 4.7.4 and lower. Now, all WP-SpamShield users are protected.
+* Added mitigation for CVE-2017-8295, the zero-day exploit that affects *all versions of WordPress to date*, including version 4.7.5 and earlier. **Now, all WP-SpamShield users are protected from this threat.** More information is available in [this blog post](https://www.redsandmarketing.com/blog/wp-spamshield-stops-wordpress-exploit-cve-2017-8295/).
 * Added a number of preemptive security enhancements.
-* Added a note with clarification to the WP-SpamShield Security Alerts.
+* Added a note with clarification to the WP-SpamShield Security Alerts: *"Security alert provided by WP-SpamShield. Data provided by WPScan Vulnerability Database."*
 * Removed support for CommentLuv plugin as it is an abandoned plugin.
 * Added new spam filters to the algorithm.
 * Improved some filters in the anti-spam algorithm.
@@ -1036,7 +1043,7 @@ If you have any further questions, please submit them on the main [WP-SpamShield
 For a complete list of changes to the plugin, view the [Changelog](https://www.redsandmarketing.com/plugins/wp-spamshield/changelog/).
 
 == Upgrade Notice ==
-= 1.9.9.9.9 =
+= 1.9.10 =
 
-* Made various code enhancements/improvements, added mitigation for CVE-2017-8295 zero-day WordPress exploit, improved/updated the spam filters, and more. Please see Changelog for details.
+* Made various code enhancements and improvements, and improved/updated the spam filters. Please see Changelog for details.
 

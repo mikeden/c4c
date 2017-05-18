@@ -700,13 +700,13 @@ body#tinymce.wp-editor p {
 }
 /* line 45, ../scss/editor-style.scss */
 body#tinymce.wp-editor a, body#tinymce.wp-editor a:visited {
-  color: #589ca6;
+  color: #493e4f;
   /* on hover */
   /* on click */
 }
 /* line 49, ../scss/editor-style.scss */
 body#tinymce.wp-editor a:hover, body#tinymce.wp-editor a:focus, body#tinymce.wp-editor a:visited:hover, body#tinymce.wp-editor a:visited:focus {
-  color: #488088;
+  color: #312a35;
 }
 /* line 58, ../scss/editor-style.scss */
 body#tinymce.wp-editor a:link, body#tinymce.wp-editor a:visited:link {

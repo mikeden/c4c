@@ -184,9 +184,36 @@ LAYOUT & GRID STYLES
 	}
 }
 
+.padd-top {
+	padding-top: 8%;
+}
+
 .sc-player {
 	margin-top: 90px;
 	margin-bottom: 30px;
+}
+
+.standard-page-header {
+	display:block;
+	width: 100%;
+	padding: 6% 0 9% 0;
+
+	.intro {
+		margin-top: 22px;
+		display: block;
+		position: relative;
+		padding-left: 60px;
+		width: 90%;
+		max-width: 640px;
+
+		.hr {
+			position: absolute;
+			height: 4px;
+			left:0;
+			top: 12px;
+			margin:0;
+		}
+	}
 }
 
 /*********************
@@ -293,10 +320,14 @@ CONVERSATION STYLES
 
 	&.c2 {
 		
+		
+	}
+
+	&.even {
 		p.quote {
-			padding-right:0;
-			padding-left: 10%;
-			text-align: right;
+		padding-right:0;
+		padding-left: 10%;
+		text-align: right;
 		}
 
 		p.caption {
@@ -315,16 +346,21 @@ CONVERSATION STYLES
 }
 
 
+
 .single-conversations {
 
 	p {
 		font-size: 18px;
+
+		&.comment-notes {
+			font-size: 16px;
+		}
 	}
 	
 	.c-header {
 
 		h1 {
-			padding-top: 100px; 
+			padding-top: 8%; 
 			font-size: 25px;
 		}
 
@@ -420,6 +456,57 @@ SERIES STYLES
 	}
 
 
+}
+
+.series-index {
+	.featured-series {
+		margin-bottom: 8%;
+		&.odd {
+			.photo-caption {
+				text-align: left;
+				padding-left: 10%;
+				padding-right: auto;
+			}
+		}
+	}
+}
+
+.stories-list {
+
+	padding-bottom: 6%;
+
+	.story-item {
+		margin-top: 100px;
+		h2 {
+			font-size: 18px;
+			padding-bottom: 20px;
+		}
+
+		.hr {
+			display:none;
+		}
+
+		p.link {
+			padding-top: 20px;
+			padding-bottom: 1.4em;
+		}
+
+		.photo {
+			display:block;
+			width: 100%;
+			padding-bottom: 65%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+
+			margin-bottom: 30px;
+		}
+
+	}
+
+	.right-column {
+
+	}
 }
 
 /*********************
@@ -1080,7 +1167,7 @@ PAGE NAVI STYLES
 	margin: 1.5em 0;
 }
 	.pagination{
-    text-align: center;
+    text-align: left;
 
     ul {
       display: inline-block;
@@ -1097,7 +1184,8 @@ PAGE NAVI STYLES
       float: left;
       display: inline;
       overflow: hidden;
-      border-right: 1px solid $gray;
+      font-family: $galano;
+      font-weight: 700;
     }
 
     a, span {
@@ -1105,22 +1193,20 @@ PAGE NAVI STYLES
       text-decoration: none;
       padding: 0;
       line-height: 1em;
-      font-size: 1em;
-      font-weight: normal;
+      font-size: 16px;
       padding: 0.75em;
       min-width: 1em;
       display: block;
-      color: $blue;
+      color: $aqua2;
 
       &:hover, &:focus {
-      	background-color: $blue;
-      	color: $white;
+      	color: $aqua1;
       }
     }
 
     .current{
     	cursor: default;
-    	color: $text-color;
+    	color: $aqua1;
 
     	&:hover, &:focus {
     		background-color: $white;
@@ -1153,7 +1239,7 @@ COMMENT STYLES
 #comments-title {
 	padding: 0.75em;
 	margin: 0;
-	border-top: 1px solid $light-gray;
+	border-top: 1px solid $aqua1;
 
 	/* number of comments span */
 	span {}
@@ -1179,20 +1265,25 @@ COMMENT STYLES
 	position: relative;
 	clear: both;
 	overflow: hidden;
-	padding: 1.5em;
-	border-bottom: 1px solid $light-gray;
+	padding: 0;
+	
+	article {
+		border-bottom: 1px solid $aqua1;
+	}
 
 	.comment-author {
-		padding: 7px;
+		padding: 0px;
 		border: 0;
 	}
 
 	/* vcard */
 	.vcard {
-		margin-left: 50px;
+
 
 		cite.fn {
-			font-weight: 700;
+			font-size: 18px;
+			font-family: $galano;
+			font-weight: 600;
 			font-style: normal;
 
 			a.url {}
@@ -1201,11 +1292,12 @@ COMMENT STYLES
 
 		time {
 			display: block;
-			font-size: 0.9em;
-			font-style: italic;
+			font-size: 13px;
+			font-family: $galano;
+			font-weight: 600;
 
 			a {
-				color: $meta-gray;
+				color: $aqua1;
 				text-decoration: none;
 
 				&:hover {
@@ -1219,6 +1311,7 @@ COMMENT STYLES
 		.photo {}
 
 		.avatar {
+			display:none;
 			position: absolute;
 			left: 16px;
 			border-radius: 50%;
@@ -1255,12 +1348,26 @@ COMMENT STYLES
 	&.depth-1 {
 		margin-left: 0;
 		margin-top: 0;
+
+		article {
+			padding: 30px 0 10px 0;
+		}
 	}
 
 	&:not(.depth-1) {
 		margin-top: 0;
-		margin-left: 7px;
-		padding: 7px;
+		margin-left: 0px;
+		padding: 0;
+
+		article {
+			padding-left: 8%;
+
+			.comment-reply-link {
+				padding-right: 7%;
+			}
+		}
+
+
 	}
 
 	&.depth-2 {}
@@ -1271,10 +1378,10 @@ COMMENT STYLES
 	/* general comment classes */
 	&.alt {}
 	&.odd {
-		background-color: $white;
+		
 	}
 	&.even {
-		background: $light-gray;
+		
 	}
 	&.parent {}
 	&.comment {}
@@ -1308,8 +1415,8 @@ COMMENT STYLES
 	.comment_content {
 
 		p {
-			margin: 0.7335em 0 1.5em;
-			font-size: 1em;
+			margin: 0;
+			font-size: 12px;
 			line-height: 1.5em;
 		}
 
@@ -1317,9 +1424,16 @@ COMMENT STYLES
 
 	/* comment reply link */
 	.comment-reply-link {
-		@extend .aqua-btn;
-		font-size: 0.9em;
-		float: right;
+		font-size: 13px;
+		font-family: $galano;
+		text-transform: uppercase;
+		text-decoration: none;
+		color:$text-color;
+		font-weight: 600;
+		position: absolute;
+		top: 30px;
+		right: 20px;
+		padding-right: 15%;
 
 		&:hover,
 		&:focus {
@@ -1330,7 +1444,7 @@ COMMENT STYLES
 	/* edit comment link */
 	.comment-edit-link {
 		font-style: italic;
-		margin: 0 7px;
+		margin: 0 7px 0 0;
 		text-decoration: none;
 		font-size: 0.9em;
 	}
@@ -1343,7 +1457,7 @@ COMMENT FORM STYLES
 
 .comment-respond {
 	@extend .cf;
-	padding: 1.5em;
+	padding: 1.5em 0 1.5em 0;
 	border-top: 1px solid $light-gray;
 }
 
@@ -1361,8 +1475,21 @@ COMMENT FORM STYLES
 		}
 	}
 
+	p.comment-notes {
+		font-size: 18px;
+	}
+
+	.comment-form {
+		label {
+			font-family: $galano;
+			font-size: 14px;
+		}
+	}
+
 	.comment-form-comment {
 		margin: 1.5em 0 0.75em;
+
+		
 	}
 
 	.form-allowed-tags {
@@ -1374,8 +1501,8 @@ COMMENT FORM STYLES
 	/* comment submit button */
 	#submit {
 		@extend .aqua-btn;
-		float: right;
-		font-size: 1em;
+		float: none;
+		font-size: 16px;
 	}
 
 	/* comment form title */
@@ -1445,10 +1572,17 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
+	margin-top: 120px;
 
 	#inner-footer {
 		border-top: 2px solid $aqua1;
 		padding-top: 46px;
+	}
+
+	.copyright {
+		font-size: 13px;
+		color: $aqua1;
+		padding-bottom: 40px;
 	}
 }
 
@@ -1482,7 +1616,4 @@ FOOTER STYLES
 	} /* end .footer-links */
 
 
-	.copyright {
-		font-size: 13px;
-		color: $aqua1;
-	}
+	

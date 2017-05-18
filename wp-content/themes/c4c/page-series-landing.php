@@ -19,81 +19,189 @@
 
 				<div id="inner-content" class="wrap cf">
 
-						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" class="m-all t-all d-all cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							
 
-								<header class="article-header">
+							<?php 
 
-									<h1 class="page-title"><?php the_title(); ?>----</h1>
+							global $post;
+							$pageslug=$post->post_name;
 
-									<p class="byline vcard">
-										<?php printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-									</p>
+							$categories = get_categories(array(
+							'taxonomy' => 'story_series',
+							'post_type' => 'story',
+							'hide_empty'=>0
+							
+							));
+							foreach ($categories as $category) : ?>
+						
+							<?php $catslug = $category->slug; ?>
+
+							<?php if ($pageslug==$catslug) { ?>
+							<?php $copy = get_field('copy', $category); ?>
+							<?php $location = get_field('location', $category); ?>
+							<?php $caption = get_field('image_caption', $category); ?>
+							<?php $photo = get_field('image', $category); ?>
+
+							<div class="featured-series">
+								<div class="header-wrap">
+									<div class="wrap wrap-full">
+										<div class="copy">
+											<h1><?php echo $category->name; ?></h1>
+											<p class="location"><?php echo $location ?></p>
+											<?php echo $copy ?>
+											<p class="link">
+												<a href="<?php echo get_site_url(); ?>/series/<?php echo $category->slug; ?>" class="section-links sm">Explore series</a>
+											</p>
+										</div>
+									</div>
+									<div class="bg-photo" style="background-image: url(<?php echo $photo ?>)"></div>
+									<p class="photo-caption"><?php echo $caption ?></p>
+								</div>
+							</div>
+
+							
+							<? break; } ?>
+	    					<?php endforeach; ?>
+
+								
+	    					<div class="standard-left-padd add-right">
+	    						<div class="stories-list">
+		    						<div class="m-all t-1of2 d-1of2 left-column">
+										<?php 
+											
+											$args=array(
+											  'post_type' => 'story',
+											  'post_status' => 'publish',
+											  'story_series' => $pageslug,
+											  'caller_get_posts'=> 1);
+
+											$my_query = new WP_Query($args);
+											$i = 1;
+											$count = $my_query->post_count;
+											$half = $count/2;
+											$half = round($half, 0, PHP_ROUND_HALF_UP);
+											
+
+											if( $my_query->have_posts() ) {
+										  	while ($my_query->have_posts()) : $my_query->the_post(); ?>
+
+										  		<?php $image = get_field('photo'); ?>
+
+										  		<?php {
+										  			$alt = "v1";
+										  			if ($i % 2 == 0 ) {
+										  				$alt = "v2";
+										  			}
+										  			if ($i % 3 == 0 ) {
+										  				$alt = "v3";
+										  			}
+										  		} ?>
 
 
-								</header>
+										  		<div class="story-item s<?php echo $i ?> <?php echo $alt ?>">
+										  			<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+										  			<?php if( !empty($image) ): ?>
+										  			<div class="photo" style="background-image:url(<?php echo $image['url']; ?>)"></div>
+										  			<?php endif; ?>
+										  			<div class="clearfix"></div>
+										  			<?php the_excerpt(); ?>
+										  			<p class="link">
+										  				<a href="<?php the_permalink() ?>" class="section-links sm">Read More</a>
+										  			</p>
+										  			<div class="hr"></div>
+										  		</div>
 
-								<section class="entry-content cf" itemprop="articleBody">
-									<?php
-										// the content (pretty self explanatory huh)
-										the_content();
+										  		<?php if ($i == $half) { ?>
+										  			</div>
+										  			<div class="m-all t-1of2 d-1of2 right-column">
+										  		<?php } ?>
 
-										/*
-										 * Link Pages is used in case you have posts that are set to break into
-										 * multiple pages. You can remove this if you don't plan on doing that.
-										 *
-										 * Also, breaking content up into multiple pages is a horrible experience,
-										 * so don't do it. While there are SOME edge cases where this is useful, it's
-										 * mostly used for people to get more ad views. It's up to you but if you want
-										 * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
-										 *
-										 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
-										 *
-										*/
-										wp_link_pages( array(
-											'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
-											'after'       => '</div>',
-											'link_before' => '<span>',
-											'link_after'  => '</span>',
-										) );
-									?>
-								</section>
+										  		<?php $i++; ?>
+										  	<?php endwhile;
+
+										  	} wp_reset_query(); ?>
+
+										
+
+										<?php endwhile; ?>
+
+									</div>
+									<div class="clearfix"></div>
+								</div>
+
+								<div class="clearfix"></div>
+
+								<?php else : ?>
+
+								<?php endif; ?>
 
 
-								<footer class="article-footer">
 
-                  <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
-
-								</footer>
-
-								<?php comments_template(); ?>
-
-							</article>
-
-							<?php endwhile; else : ?>
-
-									<article id="post-not-found" class="hentry cf">
-											<header class="article-header">
-												<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-										</header>
-											<section class="entry-content">
-												<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-										</section>
-										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the page-custom.php template.', 'bonestheme' ); ?></p>
-										</footer>
-									</article>
-
-							<?php endif; ?>
+							</div>
 
 						</main>
 
-						<?php get_sidebar(); ?>
 
 				</div>
+
+				<div class="wrap cf">
+					<div class="page-subhead l100">
+						<div class="top-line">
+							<div class="bg"></div>
+							<div class="highlight"></div>
+						</div>
+						<h4>Featured Series</h4>
+					</div>
+				</div>
+
+				<div class="wrap">
+					
+					<?php 
+						$categories = get_categories(array(
+							'taxonomy' => 'story_series',
+							'post_type' => 'story',
+							'hide_empty'=>0
+							
+							));
+						foreach ($categories as $category) : ?>
+							<?php 
+								$featured = get_field('featured', $category);
+								if ($featured == 1) {
+							?>
+
+							<?php $copy = get_field('copy', $category); ?>
+							<?php $location = get_field('location', $category); ?>
+							<?php $caption = get_field('image_caption', $category); ?>
+							<?php $photo = get_field('image', $category); ?>
+
+							<div class="featured-series">
+								<div class="header-wrap">
+									<div class="wrap wrap-full">
+										<div class="copy">
+											<h1><?php echo $category->name; ?></h1>
+											<p class="location"><?php echo $location ?></p>
+											<?php echo $copy ?>
+											<p class="link">
+												<a href="./<?php echo $category->slug; ?>" class="section-links sm">Explore series</a>
+											</p>
+										</div>
+									</div>
+									<div class="bg-photo" style="background-image: url(<?php echo $photo ?>)"></div>
+									<p class="photo-caption"><?php echo $caption ?></p>
+								</div>
+							</div>
+
+							
+
+							<? break; } ?>
+
+	    			<?php endforeach; ?>
+				</div>
+
 
 			</div>
 
