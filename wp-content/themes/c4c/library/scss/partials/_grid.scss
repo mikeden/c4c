@@ -251,3 +251,20 @@ them however you see fit.
   }
 
 } // end desktop styles
+
+
+/* Landscape to small desktop */
+@media (min-width: 1400px) {
+
+  .d-2of7 {
+    @include grid-col;
+    width:  20%;
+  }
+
+  .d-5of7 {
+    @include grid-col;
+     width: 80%;
+  }
+
+
+} // end desktop styles

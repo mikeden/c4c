@@ -35,11 +35,37 @@ a.section-links {
 
 p.helper {
 	font-size: 13px;
+
+	&.comments {
+		font-size: 16px;
+	}
+}
+
+.entry-content {
+	p {
+		font-size: 21px;
+	}
+
+	ol, ul {
+		li {font-size: 21px;}
+	}
+
+	blockquote {
+		p {
+			font-size: 30px;
+		}
+	}
 }
 
 h1, .h1 {
 	font-size: 32px;
 }
+
+.comment_content {
+	p {
+		font-size: 21px;
+	}
+} 
 
 /*********************
 LAYOUT & GRID STYLES
@@ -353,6 +379,60 @@ SERIES STYLES
 	}
 }
 
+.single-story {
+
+	p {
+		&.comment-notes {
+			font-size: 18px;
+		}
+	}
+
+	.entry
+	
+	.c-header {
+		h1 {
+			font-size: 32px;
+			padding-right: 35%;
+		}
+
+		.caption {
+			font-size: 18px;
+		}
+
+
+	}
+}
+
+
+/*********************
+JOURNAL STYLES
+*********************/
+
+article {
+	padding-right: 5%;
+}
+
+
+
+/*********************
+ABOUT STYLES
+*********************/
+
+.page-about {
+	.entry-content {
+		p {
+			padding-right: 30%;
+		}
+
+		blockquote {
+
+			p {
+				padding-right: 10%;
+			}
+
+		}
+	}
+}
 
 /*********************
 NAVIGATION STYLES
@@ -540,6 +620,18 @@ NAVIGATION STYLES
 	}
 }
 
+.single-story .menu-item-16 a {
+	.highlight {
+		opacity:1;
+	}
+}
+
+.nav li.current-page-ancestor a {
+	.highlight {
+		opacity:1;
+	}
+}
+
 .social-menu {
 	&.top-social {
 		display:block;
@@ -552,7 +644,7 @@ SIDEBARS & ASIDES
 *********************/
 
 .sidebar {
-	margin-top: 2.2em;
+	margin-top: 0;
 }
 
 	.widgettitle {

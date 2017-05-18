@@ -214,7 +214,13 @@ LAYOUT & GRID STYLES
 			margin:0;
 		}
 	}
+
+	&.short {
+		padding-bottom: 3%;
+	}
 }
+
+
 
 /*********************
 HOME STYLES
@@ -390,6 +396,8 @@ CONVERSATION STYLES
 	}
 }
 
+
+
 /*********************
 SERIES STYLES
 *********************/
@@ -509,6 +517,63 @@ SERIES STYLES
 	}
 }
 
+.single-story {
+
+	p {
+		font-size: 18px;
+
+		&.comment-notes {
+			font-size: 16px;
+		}
+	}
+
+	.main-photo {
+		display:block;
+		width: 100%;
+		padding-bottom: 55%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		margin-bottom: 10px;
+	}
+
+	.post-meta {
+		display:block;
+		padding-bottom: 45px;
+	}
+}
+
+
+
+
+/*********************
+JOURNAL STYLES
+*********************/
+
+.single-post {
+	.main-photo {
+		display:block;
+		width: 100%;
+		padding-bottom: 55%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		margin-bottom: 10px;
+	}
+
+	.post-meta {
+		display:block;
+		padding-bottom: 45px;
+	}
+}
+
+
+/*********************
+ABOUT STYLES
+*********************/
+
+
+
 /*********************
 LINK STYLES
 *********************/
@@ -574,6 +639,10 @@ a.section-links {
 	}
 }
 
+a.excerpt-read-more {
+	display:none;
+}
+
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
@@ -633,7 +702,23 @@ p.helper {
 	font-family: $galano;
 	font-weight: 600;
 	color:$aqua1;
+
+	&.comments {
+		padding-top: 30px;
+		font-size: 14px;
+	}
 }
+
+p.category-list {
+	margin:0 !important;
+	padding: 10px 0 10px 0;
+}
+
+p.tags-list {
+	margin:0 !important;
+	padding: 10px 0 10px 0;
+}
+
 
 /*********************
 HEADER STYLES
@@ -982,9 +1067,14 @@ POSTS & CONTENT STYLES
 
 		/* entry content */
 		.entry-content {
-			padding: 1.5em 0 0;
+			padding: 0;
 
 			p {
+				font-size: 18px;
+				margin: 0 0 1.5em;
+			}
+
+			h4 {
 				margin: 0 0 1.5em;
 			}
 
@@ -999,13 +1089,24 @@ POSTS & CONTENT STYLES
 
 			ul {
 
-				li {}
+
+
+				li {font-size: 18px;}
 
 			}
 
 			ol {
+				margin-left: 10px;
+				list-style-type: decimal;
 
-				li {}
+				
+
+				li {
+					margin-left: 8px;
+					padding-left: 20px;
+					font-size: 18px;
+					padding-bottom: 1.5em;
+				}
 
 			}
 
@@ -1051,11 +1152,15 @@ POSTS & CONTENT STYLES
 			}
 
 			blockquote {
-				margin: 0 0 1.5em 0.75em;
-				padding: 0 0 0 0.75em;
-				border-left: 3px solid $blue;
+				margin: 0 0 1.5em 0;
+				padding: 0 0 0 2em;
+				
+				border-left: 6px solid $aqua1;
 				font-style: italic;
-				color: $meta-gray;
+
+				p {
+					font-size: 24px;
+				}
 
 				&:before {}
 
@@ -1416,7 +1521,7 @@ COMMENT STYLES
 
 		p {
 			margin: 0;
-			font-size: 12px;
+			font-size: 18px;
 			line-height: 1.5em;
 		}
 
@@ -1532,7 +1637,95 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 
-.sidebar {}
+.sidebar {
+	
+	ul {
+		display:block;
+		padding:0;
+		margin:0;
+		border: 1px solid $aqua1;
+
+		margin-bottom: 42px;
+
+		li {
+			padding:0;
+			margin:0;
+			font-family: $galano;
+			font-weight: 600;
+			text-transform: uppercase;
+			font-size: 13px;
+			text-align: center;
+			background: $white;
+			border-bottom: 1px solid $aqua1;
+
+			padding: 10px 0 10px 0;
+
+			a {
+				color:$aqua1;
+				text-decoration: none;
+
+			}
+
+			&.sidebar-header {
+				background: $aqua1;
+				color:$white;
+				font-family: $galano;
+				font-weight: 600;
+				text-transform: uppercase;
+				font-size: 13px;
+				text-align: center;
+			}
+
+			&:last-child {
+				border: none;
+			}
+		}
+
+		&.posts {
+			li {
+				font-family: $garamond-reg;
+				font-size: 16px;
+				text-transform: none;
+				text-align: left;
+				padding: 10px;
+
+				a {
+					color: $text-color;
+				}
+
+				p.date {
+					font-family: $galano;
+					font-weight: 600;
+					font-size: 13px;
+					color:$aqua1;
+					padding:0;
+				}
+
+				&.sidebar-header {
+					background: $aqua1;
+					color:$white;
+					font-family: $galano;
+					font-weight: 600;
+					text-transform: uppercase;
+					font-size: 13px;
+					text-align: center;
+				}
+
+				.photo {
+					display:block;
+					float: left;
+					width: 70px;
+					height: 70px;
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: 50% 50%;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+
+}
 
 	.widgettitle {}
 

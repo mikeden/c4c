@@ -114,3 +114,18 @@ and it will create a button dependant on those variables.
   font-size: 10px;
   padding: 0 11px;
 }
+
+.category-list a {
+  @extend %btn;
+   line-height: 25px;
+  font-size: 10px;
+  padding: 0 11px;
+  background-color: $text-color;
+  color:$white !important;
+  border: 2px solid $text-color;
+
+  &:hover {
+    color:$text-color !important;
+    background:$white;
+  }
+}
