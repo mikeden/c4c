@@ -525,7 +525,7 @@ SERIES STYLES
 }
 /* line 311, ../scss/breakpoints/_768up.scss */
 .stories-list .story-item.v2 .photo {
-  width: 90%;
+  width: 100%;
 }
 /* line 317, ../scss/breakpoints/_768up.scss */
 .stories-list .story-item.v3 .photo {

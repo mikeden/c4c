@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php $sc = get_field('soundcloud');?>
 
 			<div id="content">
 
@@ -20,6 +21,7 @@
 						<h1><a href="journal/" class="alt1">Journal</a></h1>
 						<div class="hr"></div>
 						<?php the_field('intro'); ?>
+						
 					</div>
 
 					<div class="radio-callout">
@@ -143,7 +145,7 @@
 				</div>
 
 				<div class="wrap cf">
-					<div class="standard-left-padd section-callout"><a href="journal/" class="section-links">Explore all series</a></div>
+					<div class="standard-left-padd section-callout"><a href="series/" class="section-links">Explore all series</a></div>
 				</div>
 
 				<div class="wrap cf">
@@ -155,6 +157,68 @@
 						</div>
 						<h4>From the Journal</h4>
 					</div>
+
+				</div>
+				<div class="wrap cf">
+					<div class="standard-left-padd add-right">
+						<div class="stories-list">
+			    			<div class="m-all t-1of2 d-1of2 left-column">
+
+							<?php
+								$query_args = array(
+								   'post_type' => 'post',
+								   'posts_per_page' => 3
+								);
+							 	$i = 1;
+							  	$the_query = new WP_Query( $query_args );
+							  	$count = $the_query->post_count;
+								$half = $count/2;
+								$half = round($half, 0, PHP_ROUND_HALF_UP);
+							?>
+
+							<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); // run the loop ?>
+								<?php $image = get_field('photo'); ?>
+								<?php {
+						  			$alt = "v1";
+						  			if ($i % 2 == 0 ) {
+						  				$alt = "v2";
+						  			}
+						  			if ($i % 3 == 0 ) {
+						  				$alt = "v3";
+						  			}
+						  		} ?>
+								  <div class="story-item s<?php echo $i ?> <?php echo $alt ?>">
+						  			<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+						  			<?php if( !empty($image) ): ?>
+						  			<div class="photo" style="background-image:url(<?php echo $image['url']; ?>)"></div>
+						  			<?php endif; ?>
+						  			<div class="clearfix"></div>
+						  			<?php the_excerpt(); ?>
+						  			<p class="link">
+						  				<a href="<?php the_permalink() ?>" class="section-links sm">Read More</a>
+						  			</p>
+						  			<div class="hr"></div>
+						  		</div>
+
+						  		<?php if ($i == $half) { ?>
+						  			</div>
+						  			<div class="m-all t-1of2 d-1of2 right-column">
+						  		<?php } ?>
+
+						  		<?php $i++; ?>
+							<?php endwhile; endif; ?>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="wrap cf">
+					<div class="standard-left-padd section-callout"><a href="journal/" class="section-links">More from the Journal</a></div>
+				</div>
+
+				<div class="wrap cf">
 
 					<div class="page-subhead l130">
 						<div class="top-line">
@@ -173,15 +237,14 @@
 					</div>
 
 					<div class="standard-left-padd add-right">
-						<h1>Play and Go</h1>
+						<h1>Play and Go </h1>
 						<p class="helper">C4C Radio gives you every C4C Conversation in one convinient playlist.</p>
-						<iframe width="100%" height="300" class="sc-player" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/224785489&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
+						<iframe width="100%" height="300" class="sc-player" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/<?php echo $sc; ?>&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
 
 					</div>
 
 					<div class="standard-left-padd section-callout"><a href="conversations/" class="section-links">Explore all conversations</a></div>
 
-					
 
 				</div>
 
