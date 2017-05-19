@@ -309,7 +309,7 @@ SERIES STYLES
 
 		&.v2 {
 			.photo {
-				width: 100%;
+				width: 90%;
 			}
 		}
 
@@ -408,10 +408,11 @@ SERIES STYLES
 JOURNAL STYLES
 *********************/
 
-article {
-	padding-right: 5%;
+.single-post {
+	article {
+		padding-right: 5%;
+	}
 }
-
 
 
 /*********************

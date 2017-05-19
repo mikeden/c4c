@@ -239,8 +239,12 @@
 					<div class="standard-left-padd add-right">
 						<h1>Play and Go </h1>
 						<p class="helper">C4C Radio gives you every C4C Conversation in one convinient playlist.</p>
-						<iframe width="100%" height="300" class="sc-player" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/<?php echo $sc; ?>&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
 
+						<?php if ($sc) { ?>
+							<iframe width="100%" height="300" class="sc-player" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/<?php echo $sc; ?>&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
+						<?php } ?>
+
+						
 					</div>
 
 					<div class="standard-left-padd section-callout"><a href="conversations/" class="section-links">Explore all conversations</a></div>
