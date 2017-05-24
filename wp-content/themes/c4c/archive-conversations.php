@@ -36,9 +36,20 @@
 									    // reset post data (important!)
 									    wp_reset_postdata();
 									?>
+
+
+								</div>
+								<div class="convo-search">
+									<form id="searchform" action="http://localhost:8888/c4c" method="get">
+									        <input class="inlineSearch" type="text" name="s" value="Search Conversations" onblur="if (this.value == '') {this.value = 'Search Conversations';}" onfocus="if (this.value == 'Search Conversations') {this.value = '';}" />
+									        <input type="hidden" name="post_type" value="conversations" />
+									        <input class="inlineSubmit aqua-btn sm inline" id="searchsubmit" type="submit" alt="Search" value="Search" />
+									</form>
 								</div>
 							</div>
 						</div>
+
+						
 
 							<?php $i = 1 ?>
 

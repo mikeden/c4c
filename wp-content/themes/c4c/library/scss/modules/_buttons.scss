@@ -49,7 +49,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
   // clicking on the button
   &:active {
-    top: 1px; // adds a tiny hop to the click
+    //top: 1px; // adds a tiny hop to the click
   } // end active
 
 } // end .button
@@ -127,5 +127,28 @@ and it will create a button dependant on those variables.
   &:hover {
     color:$text-color !important;
     background:$white;
+  }
+}
+
+ button, html input[type="button"], input[type="reset"], input[type="submit"] {
+     @extend %btn;
+}
+
+.jssocials-share-link {
+   @extend %btn;
+   margin: 0 !important;
+  line-height: 21px !important;
+  font-size: 10px;
+  padding: 0 11px;
+  border-radius: 0px !important;
+  background: $gray;
+  color:$white !important;
+  border: 2px solid $gray !important;
+  padding: 0 18px 0 9px !important;
+  text-align: left !important;
+
+  &:hover {
+    color: $gray !important;
+    background:$white !important;
   }
 }

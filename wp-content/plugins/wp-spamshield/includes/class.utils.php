@@ -1,7 +1,7 @@
 <?php
 /**
  *  WP-SpamShield Utilities
- *  File Version 1.9.9.9.9
+ *  File Version 1.9.11
  */
 
 /* Make sure file remains secure if called directly */
@@ -439,10 +439,10 @@ class WPSS_Utils extends WP_SpamShield {
 
 	/**
 	 *	Attempt to detect and identify web host
-	 *	As of RSSD.20170414.01, web hosts detected: 98+
+	 *	As of RSSD.20170518.01, web hosts detected: 98+
 	 *	@dependencies	WPSS_Utils::get_option(), WPSS_Utils::update_option(), WPSS_Utils::get_server_hostname(), WPSS_Utils::get_ip_dns_params(), WPSS_Utils::get_reverse_dns(), WP_SpamShield::is_valid_ip(), WPSS_Utils::get_ns(), WPSS_Utils::sort_unique()
 	 *	@used by		...
-	 *	@func_ver		RSSD.20170414.01
+	 *	@func_ver		RSSD.20170518.01
 	 *	@since			WPSS 1.9.9.8.2, RSSD 1.0.3
 	 */
 	static public function get_web_host( $params = array() ) {
@@ -484,13 +484,13 @@ class WPSS_Utils extends WP_SpamShield {
 			'Arvixe'					=> array( 'slug' => 'arvixe', 'webhost' => 'Arvixe', 'domains' => 'arvixe.com,arvixeshared.com,arvixevps.com', ), 
 			'Automattic'				=> array( 'slug' => 'automattic', 'webhost' => 'Automattic', 'domains' => 'automattic.com', ), 
 			'BigScoots'					=> array( 'slug' => 'bigscoots', 'webhost' => 'BigScoots', 'domains' => 'bigscoots.com', ), 
-			'Bluehost'					=> array( 'slug' => 'bluehost', 'webhost' => 'Bluehost', 'domains' => 'bluehost.com', 'tags' => 'top' ), 
+			'Bluehost'					=> array( 'slug' => 'bluehost', 'webhost' => 'Bluehost', 'domains' => 'bluehost.com,mybluehost.me', 'tags' => 'top' ), 
 			'Cloudways'					=> array( 'slug' => 'cloudways', 'webhost' => 'Cloudways', 'domains' => 'cloudways.,cloudwaysapps.', ), 
 			'Cogeco Peer 1'				=> array( 'slug' => 'cogeco-peer-1', 'webhost' => 'Cogeco Peer 1', 'domains' => 'peer1.net', ), 
 			'ColoCrossing'				=> array( 'slug' => 'colocrossing', 'webhost' => 'ColoCrossing', 'domains' => 'colocrossing.com,vsnx.net', ), 
 			'DigitalOcean'				=> array( 'slug' => 'digitalocean', 'webhost' => 'DigitalOcean', 'domains' => 'digitalocean.com', ), 
 			'Doteasy'					=> array( 'slug' => 'doteasy', 'webhost' => 'Doteasy', 'domains' => 'doteasy.com', ), 
-			'DreamHost'					=> array( 'slug' => 'dreamhost', 'webhost' => 'DreamHost', 'domains' => 'dreamhost.com', ), 
+			'DreamHost'					=> array( 'slug' => 'dreamhost', 'webhost' => 'DreamHost', 'domains' => 'dreamhost.com,dreamhosters.com', ), 
 			'eHost'						=> array( 'slug' => 'ehost', 'webhost' => 'eHost', 'domains' => 'ehost.com', ), 
 			'Enzu'						=> array( 'slug' => 'enzu', 'webhost' => 'Enzu', 'domains' => 'scalabledns.com', ), 
 			'EuHost'					=> array( 'slug' => 'euhost', 'webhost' => 'EuHost', 'domains' => 'euhost.co.uk', ), 
@@ -541,7 +541,7 @@ class WPSS_Utils extends WP_SpamShield {
 			'One.com'					=> array( 'slug' => 'one-com', 'webhost' => 'One.com', 'domains' => 'b-one.net,b-one-dns.net,one.com', ), 
 			'Online.net'				=> array( 'slug' => 'online-net', 'webhost' => 'Online.net', 'domains' => 'online.net,poneytelecom.eu', ), 
 			'OVH Hosting'				=> array( 'slug' => 'ovh-hosting', 'webhost' => 'OVH Hosting', 'domains' => 'anycast.me,ovh.co.uk,ovh.com,ovh.net', ), 
-			'Pagely'					=> array( 'slug' => 'pagely', 'webhost' => 'Pagely', 'domains' => 'pagely.com', ), 
+			'Pagely'					=> array( 'slug' => 'pagely', 'webhost' => 'Pagely', 'domains' => 'pagely.com,pagelyhosting.com', ), 
 			'Pair Networks'				=> array( 'slug' => 'pair-networks', 'webhost' => 'Pair Networks', 'domains' => 'ns0.com,pair.com', ), 
 			'PHPNET'					=> array( 'slug' => 'phpnet', 'webhost' => 'PHPNET', 'domains' => 'phpnet.org', ), 
 			'PlusServer'				=> array( 'slug' => 'plusserver', 'webhost' => 'PlusServer', 'domains' => 'plusserver.com', ), 

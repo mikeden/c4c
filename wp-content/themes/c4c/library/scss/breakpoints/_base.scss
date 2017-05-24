@@ -95,16 +95,27 @@ LAYOUT & GRID STYLES
 
 .videoWrapper {
 	position: relative;
-	padding-bottom: 51.5%; /* 16:9 */
-	padding-top: 25px;
+	padding-bottom: 41.5%; /* 16:9 */
 	height: 0;
+	overflow:hidden;
 }
-.videoWrapper iframe {
+.videoWrapper video {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
+	height: auto;
+}
+
+.videoWrapper .mobile-poster {
+	position: relative;
+	width: 100%;
 	height: 100%;
+	background-image: url(../video/poster.png);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	padding-bottom: 45.5%;
 }
 
 .hr {
@@ -221,7 +232,38 @@ LAYOUT & GRID STYLES
 }
 
 
+p#share {
+	padding: 10px 0 .7em 0;
 
+	.fa {
+		position: absolute;
+		top:5px;
+		right: 6px;
+		z-index:2;
+		font-size: 13px;
+		padding-left: 4px;
+		padding-right: 6px;
+	}
+
+	.jssocials-share-label {
+    	padding-left: 0;
+    	vertical-align: middle;
+	}
+
+	.jssocials-shares {
+    	margin: 0;
+	}
+
+	.jssocials-share {
+		margin: 0 0.6em 0 0;
+	}
+
+}
+
+p.tags {
+	padding-top: 20px;
+	
+}
 /*********************
 HOME STYLES
 *********************/
@@ -265,7 +307,7 @@ HOME STYLES
 
 
 
-	margin-top: 7%;
+	margin-top: 5%;
 	margin-bottom: 10%;
 
 	.block {
@@ -295,6 +337,53 @@ HOME STYLES
 
 	
 
+}
+
+.supporters {
+	text-align: center;
+	padding-bottom: 50px;
+
+	&.primary {
+		padding-bottom: 20px;
+		padding-top: 30px;
+	}
+
+	p {
+		font-family: $galano;
+		color:	$aqua1;
+		font-weight: 14px;
+		padding: 0 0 20px 0;
+	}
+
+	a {
+		display:block;
+		text-align: center;
+
+		img {
+			margin: 0 2% 40px 2%;
+
+			&.no-margin {
+				margin:0;
+			}
+		}
+
+		&.last {
+			img {
+				margin-right:0;
+			}
+			
+		}
+	}
+
+	.supporter {
+		display: block;
+		width: 33%;
+		height: 62px;
+		float: left;
+		background-image: url(../images/logo-inspirit.png);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+	}
 }
 
 /*********************
@@ -387,16 +476,37 @@ CONVERSATION STYLES
 		}
 	}
 
-	p.tags {
-		padding-top: 20px;
-	}
-
 	.copy {
 		padding: 50px 0 40px 0;
 	}
 }
 
+.post-type-archive-conversations {
 
+	.convo-search {
+		position: relative;
+		width: 90%;
+  		max-width: 640px;
+		padding-top: 24px;
+
+		input[type="text"] {
+			max-width: 500px;
+			color:$aqua1;
+		}
+	}
+	.inlineSearch {
+		float: left;
+	}
+
+	.aqua-btn {
+		border: 0;
+		height: 40px;
+		line-height: 38px;
+		border: 1px solid $aqua1;
+		border-left:0;
+
+	}
+}
 
 /*********************
 SERIES STYLES
@@ -546,6 +656,23 @@ SERIES STYLES
 		display:block;
 		padding-bottom: 45px;
 	}
+
+	.photo-meta {
+		p {
+			font-family: $galano;
+			font-size: 12px;
+			font-weight: 600;
+			padding: 10px 0 0 0;
+
+			&.story-location {
+				color:$aqua1;
+			}
+
+			&.photo-credit {
+				margin-bottom:0;
+			}
+		}
+	}
 }
 
 
@@ -577,7 +704,49 @@ JOURNAL STYLES
 ABOUT STYLES
 *********************/
 
+.page-about {
+	h2 {
+		padding-bottom: 30px;
+		&:before {
+			content: "";
+			display:block;
+			width: 25px;
+			height: 4px;
+			background:$aqua1;
+			margin: 5% 0 5% 0;
+		}
+	}
+}
 
+.team {
+	.row {
+		display:block;
+		position: relative;
+		width: 100%;
+
+		.team-member {
+			display:block;
+			width: 100%;
+
+			.photo {
+				width: 100%;
+				height: auto;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: 50% 50%;
+				padding-bottom: 100%;
+			}
+
+			p{
+				color:$text-color;
+				padding: 18px 0 90px 30px;
+			}
+		}
+
+	}
+
+	
+}
 
 /*********************
 LINK STYLES
@@ -1220,7 +1389,6 @@ POSTS & CONTENT STYLES
 
 		.wp-caption {
 			max-width: 100%;
-			background: #eee;
 			padding: 5px;
 
 			/* images inside wp-caption */
@@ -1231,9 +1399,10 @@ POSTS & CONTENT STYLES
 			}
 
 			p.wp-caption-text {
-				font-size: 0.85em;
+				font-size: .8em;
+				font-family:$galano;
 				margin: 4px 0 7px;
-				text-align: center;
+				text-align: right;
 			}
 
 		} /* end .wp-caption */
@@ -1543,7 +1712,7 @@ COMMENT STYLES
 		position: absolute;
 		top: 30px;
 		right: 20px;
-		padding-right: 15%;
+		padding-right: 0;
 
 		&:hover,
 		&:focus {
@@ -1668,6 +1837,10 @@ SIDEBARS & ASIDES
 			a {
 				color:$aqua1;
 				text-decoration: none;
+
+				&:hover {
+					color:$text-color;
+				}
 
 			}
 

@@ -59,6 +59,11 @@
 									<?php endif; ?>
 								</p>
 
+								<p id="share">
+
+								</p>
+								<div class="clearfix"></div>
+
 							</div>
 
 							<div class="standard-left-padd add-right">

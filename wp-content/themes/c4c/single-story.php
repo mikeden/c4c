@@ -38,10 +38,45 @@
 								  			<div class="main-photo" style="background-image:url(<?php echo $image['url']; ?>)"></div>
 								  		<?php endif; ?>
 
+								  		<div class="photo-meta">
+								  			<p class="photo-credit">
+								  				<?php the_field("photo_credit"); ?>
+								  			</p>
+
+								  			<?php $fname = get_the_author_meta('first_name');
+											$lname = get_the_author_meta('last_name');
+											$full_name = '';
+
+											if( empty($fname)){
+											    $full_name = $lname;
+											} elseif( empty( $lname )){
+											    $full_name = $fname;
+											} else {
+											    //both first name and last name are present
+											    $full_name = "{$fname} {$lname}";
+											}
+											?>
+								  			<p class="story-location">
+								  				By <?php echo $full_name; ?>, <?php echo get_the_date(); ?>
+								  			</p>
+
+								  			<div class="clearfix"></div>
+								  		</div>
+
 								  		<div class="post-meta">
-											<p class="helper comments">
-											  <?php comments_number( 'No comments', '1 comment', '% comments' ); ?>
+
+								  			<div class="single-left">
+												<p class="helper comments">
+												  <?php comments_number( 'No comments', '1 comment', '% comments' ); ?>
+												</p>
+											</div>
+
+											<p id="share" class="padd-less">
+
 											</p>
+
+											<div class="clearfix"></div>
+
 										</div>
 
 									</div>

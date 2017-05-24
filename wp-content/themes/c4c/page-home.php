@@ -6,8 +6,13 @@
 				
 
 				<div class="home-wrapper">
-					<div class="videoWrapper">
-						<iframe src="https://player.vimeo.com/video/13008175?autoplay=0&loop=1&byline=0&title=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					<div class="videoWrapper home">
+						<video autoplay="" class="background-video" data-prevent-cleanup="keep" loop="" poster="<?php echo get_template_directory_uri(); ?>/library/video/poster.png" preload="">
+							<source src="<?php echo get_template_directory_uri(); ?>/library/video/Distill-Header-Video.mp4" type="video/mp4">
+						</video>
+						<div class="mobile-poster">
+
+						</div>
 					</div>
 				</div>
 
@@ -26,7 +31,7 @@
 
 					<div class="radio-callout">
 						<div class="block">
-							<a href="#" class="aqua-btn sm">Play and Go</a>
+							<a href="#" class="aqua-btn sm" id="play-go">Play and Go</a>
 							<h4>C4C Radio</h4>
 							<p>Every C4C Conversation in one convenient playlist</p>
 							<div class="clearfix"></div>
@@ -228,6 +233,35 @@
 						<h4>Our Supporters</h4>
 					</div>
 
+					<div class="standard-left-padd add-right">
+						<div class="supporters primary">
+							<!--<div class="supporter"></div>
+							<div class="supporter"></div>
+							<div class="supporter"></div>
+							<div class="clearfix"></div>-->
+
+							<a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo-inspirit.png" /></a>
+							<a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/MacMillan_logo.png" /></a>
+							<a href="#" target="_blank" class="last"><img src="<?php echo get_template_directory_uri(); ?>/library/images/NFB_Logo.png" /></a>
+
+						</div>
+
+						<div class="supporters">
+
+							<p>In In partnership with:</p> 
+							<a href="#" target="_blank"><img class="no-margin" src="<?php echo get_template_directory_uri(); ?>/library/images/VIA_Rail_Logo.png" /></a>
+
+						</div>
+
+						<div class="supporters">
+
+							<a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/Ryerson_Logo.png" /></a>
+							<a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/Carleton_Logo.png" /></a>
+							<a href="#" target="_blank" class="last"><img src="<?php echo get_template_directory_uri(); ?>/library/images/Mitacs_Logo.png" /></a>
+
+						</div>
+					</div>
+
 					<div class="page-subhead l80">
 						<div class="top-line">
 							<div class="bg"></div>
@@ -236,7 +270,7 @@
 						<h4>C4C Radio</h4>
 					</div>
 
-					<div class="standard-left-padd add-right">
+					<div class="standard-left-padd add-right" id="c4c-player">
 						<h1>Play and Go </h1>
 						<p class="helper">C4C Radio gives you every C4C Conversation in one convinient playlist.</p>
 

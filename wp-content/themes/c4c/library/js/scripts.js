@@ -109,6 +109,36 @@ function loadGravatars() {
  * Put all your regular jQuery in here.
 */
 jQuery(document).ready(function($) {
+    $browser = jQuery.browser.mobile;
+    
+    if ($browser == false) {
+        $('.videoWrapper.home .mobile-poster').css("display", "none");
+    } else {
+        $('.videoWrapper.home video').css("display", "none");
+    }
+
+    jsSocials.setDefaults("twitter", {
+      label: "Share on"
+    });
+
+     jsSocials.setDefaults("facebook", {
+      label: "Share on"
+    });
+
+    $("#share").jsSocials({
+        smallScreenWidth: 180,
+        shareIn: "popup",
+        showCount: false,
+        shares: ["twitter", "facebook"]
+    });
+
+
+    $("#play-go").click(function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $("#c4c-player").offset().top
+        }, 1000);
+    });
 
   /*
    * Let's fire off the gravatar function
@@ -123,6 +153,8 @@ jQuery(document).ready(function($) {
 
     });
   });
+
+
 
 
 

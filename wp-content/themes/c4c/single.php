@@ -42,23 +42,35 @@
 							  		<?php endif; ?>
 
 							  		<div class="post-meta">
-								  		<p class="category-list">
-											<?php printf( __( '', 'bonestheme' ).' %1$s', get_the_category_list(' ') ); ?>
-										</p>
-								  		<p class="tags-list">
-											<?php
-											$posttags = get_the_tags();
-											if ($posttags) {
-												foreach($posttags as $tag) {
-													echo '<a href="';echo bloginfo(url);
-													echo '/tag/' . $tag->slug . '" class="<?php echo $term->slug; ?> aqua-btn x-sm">' . $tag->name . '</a>';
+
+							  			
+								  		<div class="single-left">
+
+									  		<p class="category-list">
+												<?php printf( __( '', 'bonestheme' ).' %1$s', get_the_category_list(' ') ); ?>
+											</p>
+									  		<p class="tags-list">
+												<?php
+												$posttags = get_the_tags();
+												if ($posttags) {
+													foreach($posttags as $tag) {
+														echo '<a href="';echo bloginfo(url);
+														echo '/tag/' . $tag->slug . '" class="<?php echo $term->slug; ?> aqua-btn x-sm">' . $tag->name . '</a>';
+														}
 													}
-												}
-											?>
+												?>
+											</p>
+											<p class="helper comments">
+											  <?php comments_number( 'No comments', '1 comment', '% comments' ); ?>
+											</p>
+										</div>
+
+										<p id="share" class="padd-less">
+
 										</p>
-										<p class="helper comments">
-										  <?php comments_number( 'No comments', '1 comment', '% comments' ); ?>
-										</p>
+
+										<div class="clearfix"></div>
+
 									</div>
 
 									

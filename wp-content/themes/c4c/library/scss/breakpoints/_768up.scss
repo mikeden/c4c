@@ -183,6 +183,7 @@ GENERAL STYLES
 	width: 75%;
 }
 
+
 /*********************
 HOME STYLES
 *********************/
@@ -198,7 +199,7 @@ HOME STYLES
 	display:block;
 	background:$white;
 	z-index:2;
-	top:-138%;
+	top:-128%;
 	left: 8%;
 
 	h1 {
@@ -209,6 +210,18 @@ HOME STYLES
 .radio-callout {
 	width: 48%;
 	margin-left: 50%;
+}
+
+.supporters {
+	text-align: center;
+
+	a {
+		display: inline;
+		img {
+			margin: 0 5% 40px 5%;
+		}
+
+	}
 }
 
 /*********************
@@ -435,6 +448,32 @@ ABOUT STYLES
 	}
 }
 
+
+.team {
+	.row {
+
+		.team-member {
+			width: 27.5%;
+			float: left;
+
+			.photo {
+				width: 95%;
+			}
+
+			p {
+				padding-bottom: 130px;
+			}
+
+		}
+		&.r2 {
+			.team-member {
+				float: right;
+			}
+		}
+	}
+
+}
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -637,6 +676,10 @@ NAVIGATION STYLES
 	&.top-social {
 		display:block;
 	}
+}
+
+.comment-reply-link {
+	padding-right: 15%;
 }
 
 

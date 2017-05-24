@@ -27,6 +27,50 @@ them in here, they won't work.
 NAVIGATION STYLES
 *********************/
 
+.single-left {
+	float:left;
+}
+
+p#share {
+	padding-top: 20px;
+	float: right;
+
+	.jssocials-share {
+		margin: 0 0 0 0.6em;
+	}
+
+	&.less-padd {
+		padding-top: 10px;
+	}
+
+
+}
+
+p.tags {
+	float: left;
+}
+
+
+.single-story {
+
+	.photo-meta {
+		p {
+			font-size: 13px;
+
+			&.story-location {
+				float: left;
+			}
+
+			&.photo-credit {
+				float: right;
+				text-align: right;
+			}
+		}
+	}
+}
+
+
+
 .nav {}
 
 	/* .menu is clearfixed inside mixins.scss */
