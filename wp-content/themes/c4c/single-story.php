@@ -116,7 +116,7 @@
 									<div class="bg"></div>
 									<div class="highlight"></div>
 								</div>
-								<h4>Related Series Stories</h4>
+								<h4>More Stories From This Series</h4>
 							</div>
 
 							<div class="standard-left-padd">

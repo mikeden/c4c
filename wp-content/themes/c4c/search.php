@@ -21,7 +21,7 @@
 
 									<h2 class="search-title entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 
-                  						<p class="byline entry-meta vcard">
+                  						<p class="helper entry-meta vcard">
                     							<?php printf( __( 'Posted %1$s by %2$s', 'bonestheme' ),
                    							    /* the time the post was published */
                    							    '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',

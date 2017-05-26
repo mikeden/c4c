@@ -191,7 +191,7 @@ HOME STYLES
 
 .home-intro {
 	position: absolute;
-	width: 40%;
+	width: 45%;
 
 	
 	margin: 0;
@@ -208,8 +208,8 @@ HOME STYLES
 }
 
 .radio-callout {
-	width: 48%;
-	margin-left: 50%;
+	width: 43%;
+	margin-left: 55%;
 }
 
 .supporters {
@@ -444,6 +444,12 @@ ABOUT STYLES
 				padding-right: 10%;
 			}
 
+		}
+	}
+
+	.contact {
+		.contact-header {
+			font-size: 14px;
 		}
 	}
 }

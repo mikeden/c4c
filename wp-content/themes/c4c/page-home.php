@@ -7,8 +7,8 @@
 
 				<div class="home-wrapper">
 					<div class="videoWrapper home">
-						<video autoplay="" class="background-video" data-prevent-cleanup="keep" loop="" poster="<?php echo get_template_directory_uri(); ?>/library/video/poster.png" preload="">
-							<source src="<?php echo get_template_directory_uri(); ?>/library/video/Distill-Header-Video.mp4" type="video/mp4">
+						<video autoplay="" class="background-video" data-prevent-cleanup="keep" loop="" poster="<?php echo get_template_directory_uri(); ?>/library/video/poster.jpg" preload="">
+							<source src="https://player.vimeo.com/external/218968017.hd.mp4?s=6f838e1c86b58c668a3edad47b7ca52998e9f14f&profile_id=119" type="video/mp4">
 						</video>
 						<div class="mobile-poster">
 
@@ -33,7 +33,7 @@
 						<div class="block">
 							<a href="#" class="aqua-btn sm" id="play-go">Play and Go</a>
 							<h4>C4C Radio</h4>
-							<p>Every C4C Conversation in one convenient playlist</p>
+							<p>C4C Conversations in one convenient playlist.</p>
 							<div class="clearfix"></div>
 						</div>
 					</div>
@@ -235,30 +235,20 @@
 
 					<div class="standard-left-padd add-right">
 						<div class="supporters primary">
-							<!--<div class="supporter"></div>
-							<div class="supporter"></div>
-							<div class="supporter"></div>
-							<div class="clearfix"></div>-->
-
-							<a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo-inspirit.png" /></a>
+							<a href="http://inspiritfoundation.org/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo-inspirit.png" /></a>
 							<a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/MacMillan_logo.png" /></a>
-							<a href="#" target="_blank" class="last"><img src="<?php echo get_template_directory_uri(); ?>/library/images/NFB_Logo.png" /></a>
-
+							<a href="https://www.nfb.ca/" target="_blank" class="last"><img src="<?php echo get_template_directory_uri(); ?>/library/images/NFB_Logo.png" /></a>
 						</div>
 
 						<div class="supporters">
-
-							<p>In In partnership with:</p> 
-							<a href="#" target="_blank"><img class="no-margin" src="<?php echo get_template_directory_uri(); ?>/library/images/VIA_Rail_Logo.png" /></a>
-
+							<p>In partnership with:</p> 
+							<a href="http://www.viarail.ca/en" target="_blank"><img class="no-margin" src="<?php echo get_template_directory_uri(); ?>/library/images/VIA_Rail_Logo.png" /></a>
 						</div>
 
 						<div class="supporters">
-
-							<a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/Ryerson_Logo.png" /></a>
-							<a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/Carleton_Logo.png" /></a>
-							<a href="#" target="_blank" class="last"><img src="<?php echo get_template_directory_uri(); ?>/library/images/Mitacs_Logo.png" /></a>
-
+							<a href="http://www.ryerson.ca/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/Ryerson_Logo.png" /></a>
+							<a href="http://carleton.ca/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/Carleton_Logo.png" /></a>
+							<a href="https://www.mitacs.ca/en" target="_blank" class="last"><img src="<?php echo get_template_directory_uri(); ?>/library/images/Mitacs_Logo.png" /></a>
 						</div>
 					</div>
 
@@ -275,7 +265,7 @@
 						<p class="helper">C4C Radio gives you every C4C Conversation in one convinient playlist.</p>
 
 						<?php if ($sc) { ?>
-							<iframe width="100%" height="300" class="sc-player" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/<?php echo $sc; ?>&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
+							<iframe width="100%" height="300" class="sc-player" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/<?php echo $sc; ?>&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false&amp;&color=000000"></iframe>
 						<?php } ?>
 
 						

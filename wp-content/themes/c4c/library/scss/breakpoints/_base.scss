@@ -111,7 +111,7 @@ LAYOUT & GRID STYLES
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background-image: url(../video/poster.png);
+	background-image: url(../video/poster-mobile.jpg);
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: cover;
@@ -290,11 +290,11 @@ HOME STYLES
 	}
 
 	p {
-		padding-bottom: 2em;
+		padding-bottom: 1em;
 	}
 
 	.hr {
-		margin-bottom: 44px;
+		margin-bottom: 8%;
 	}
 }
 
@@ -716,6 +716,44 @@ ABOUT STYLES
 			margin: 5% 0 5% 0;
 		}
 	}
+
+	.main-photo {
+		display: block;
+		width: 100%;
+		padding-bottom: 44%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		margin-bottom: 4%;
+	}
+
+	.contact {
+		display:block;
+		float: left;
+
+		&.email {
+			padding-right: 18%;
+		}
+
+		.contact-header {
+			font-family: $garamond-capt;
+			font-size: 13px;
+			font-weight: 600;
+			color:$aqua1;
+			padding-bottom: 4em;
+		}
+
+		.helper {
+			a {
+				color: $text-color;
+				text-decoration: none;
+
+				&:hover {
+					color: $aqua1;
+				}
+			}
+		}
+	}
 }
 
 .team {
@@ -757,7 +795,7 @@ a, a:visited {
 
 	/* on hover */
 	&:hover, &:focus {
-		color: $link-hover;
+		color: $aqua1;
 	}
 
 	/* on click */
@@ -908,7 +946,7 @@ HEADER STYLES
 		width: 148px;
 		height: 24px;
 		background-position: 50% 50%;
-		background: url(../images/C4C_Logo.svg);
+		background-image: url(../images/C4C_Logo.png);
 		background-repeat: no-repeat;
 		margin:20px 0 20px 0;
 		padding:0;
@@ -930,6 +968,10 @@ HEADER STYLES
 
 		
 	}
+
+.svg .logo {
+	background-image: url(../images/C4C_Logo.svg); 
+}
 
 /*********************
 NAVIGATION STYLES
@@ -1009,6 +1051,20 @@ and more scalable.
 
 	}
 
+}
+
+
+.svg .slicknav_menu {
+
+	.social-menu.mobile-social {
+		
+		li {
+			a {
+				background-image: url(../images/Social_Media_White.svg);
+				margin: 0 auto;
+			}
+		}
+	}
 }
 
 .post-type-archive-conversations {
@@ -1134,7 +1190,7 @@ and more scalable.
 			display:block;
 			height: 18px;
 			margin: 0 auto;
-			background-image: url(../images/Social_Media.svg);
+			background-image: url(../images/Social_Media.png);
 			background-repeat: no-repeat;
 			opacity: 1;
 
@@ -1155,7 +1211,7 @@ and more scalable.
 
 			&.sc {
 				width: 31px;
-				background-position: -132px 0;
+				background-position: -134px 0;
 			}
 
 			&:hover {
@@ -1176,6 +1232,15 @@ and more scalable.
 	}
 
 
+}
+
+.svg .social-menu {
+	li {
+
+		a {
+			background-image: url(../images/Social_Media.svg);
+		}
+	}
 }
 
 

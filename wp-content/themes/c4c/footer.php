@@ -28,10 +28,10 @@
 
 					<div class="m-all t-1of2 d-1of2">
 						<ul class="social-menu btm-social">
-							<li class="fb"><a href="#" class="fb" target="_blank" title="Facebook"></a></li>
-							<li class="tw"><a href="#" class="tw" target="_blank" title="Twitter"></a></li>
-							<li class="ig"><a href="#" class="ig" target="_blank" title="Instagram"></a></li>
-							<li class="sc"><a href="#" class="sc" target="_blank" title="Soundcloud"></a></li>
+							<li class="fb"><a href="https://www.facebook.com/C4CCanada/" class="fb" target="_blank" title="Facebook"></a></li>
+							<li class="tw"><a href="https://twitter.com/C4CCanada" class="tw" target="_blank" title="Twitter"></a></li>
+							<li class="ig"><a href="https://www.instagram.com/challengeforchangecanada/" class="ig" target="_blank" title="Instagram"></a></li>
+							<li class="sc"><a href="https://soundcloud.com/user-283436858-290767787" class="sc" target="_blank" title="Soundcloud"></a></li>
 						</ul>
 					</div>
 
