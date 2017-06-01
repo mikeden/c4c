@@ -34,10 +34,13 @@
 						<?php endwhile; endif; ?>
 					</ul>
 
-
-					<ul>
+					<form action="//challengeforchange.us16.list-manage.com/subscribe/post?u=2b5a8a54485737eb7a294c5a0&amp;id=41555eb024" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					<ul id="sidebar-newsletter">
 						<li class="sidebar-header">Newsletter</li>
+						<li class="signup"><input type="text" value="" name="NAME" class="" id="mce-NAME" placeholder="Enter Name"></li>
+						<li class="signup"><input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter Email"></li>
+						<li class="signup"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="aqua-btn sm"></li>
 					</ul>
-
+					</form>
 
 				</div>

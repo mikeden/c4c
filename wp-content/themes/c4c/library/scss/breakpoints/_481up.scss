@@ -22,6 +22,36 @@ anymore, so just be aware that if you drop
 them in here, they won't work.
 */
 
+.mc-field-group {
+	float: left;
+
+	&.name-group {
+		width: 30%;
+	}
+
+	&.email-group {
+		width: 70%;
+
+		.email {
+			width: 50%;
+		}
+	}
+
+	#mc-embedded-subscribe {
+		margin-bottom:0;
+
+		&.aqua-btn {
+			border-left:0;
+		}
+	}
+
+	#mce-EMAIL {
+		float:left;
+		display:inline-block;
+		border-left:none;
+	}
+}
+
 
 /*********************
 NAVIGATION STYLES

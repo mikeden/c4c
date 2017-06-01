@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <?php $sc = get_field('soundcloud');?>
+<?php $intro = get_field('newsletter_intro');?>
 
 			<div id="content">
 
@@ -8,7 +9,7 @@
 				<div class="home-wrapper">
 					<div class="videoWrapper home">
 						<video autoplay="" class="background-video" data-prevent-cleanup="keep" loop="" poster="<?php echo get_template_directory_uri(); ?>/library/video/poster.jpg" preload="">
-							<source src="https://player.vimeo.com/external/218968017.hd.mp4?s=6f838e1c86b58c668a3edad47b7ca52998e9f14f&profile_id=119" type="video/mp4">
+							<source src="https://player.vimeo.com/external/219129244.hd.mp4?s=194d1f70f8bd84242f8d2202c21937cd80665820&profile_id=119" type="video/mp4">
 						</video>
 						<div class="mobile-poster">
 
@@ -164,6 +165,10 @@
 					</div>
 
 				</div>
+
+
+
+				
 				<div class="wrap cf">
 					<div class="standard-left-padd add-right">
 						<div class="stories-list">
@@ -230,6 +235,62 @@
 							<div class="bg"></div>
 							<div class="highlight"></div>
 						</div>
+						<h4>Subscribe to Newsletter</h4>
+					</div>
+
+				</div>
+
+				<div class="wrap cf">
+					<div class="standard-left-padd" id="newsletter">
+
+						<div class="intro">
+							<div class="hr"></div>
+							<?php echo $intro; ?>
+						</div>
+
+						<!-- Begin MailChimp Signup Form -->
+						<div id="mc_embed_signup">
+							<form action="//challengeforchange.us16.list-manage.com/subscribe/post?u=2b5a8a54485737eb7a294c5a0&amp;id=41555eb024" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+							    <div id="mc_embed_signup_scroll">
+								
+
+							<div class="mc-field-group name-group">
+								<label for="mce-NAME">Name </label>
+								<input type="text" value="" name="NAME" class="" id="mce-NAME" placeholder="Enter Name">
+							</div>
+							<div class="mc-field-group email-group">
+								<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
+								<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter Email"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="aqua-btn sm inline">
+							</div>
+							<div class="clearfix"></div>
+							<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+
+								 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+							    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2b5a8a54485737eb7a294c5a0_41555eb024" tabindex="-1" value=""></div>
+							   
+							    </div>
+							    <div id="mce-responses" class="clear">
+									<div class="response" id="mce-error-response" style="display:none"></div>
+									<div class="response" id="mce-success-response" style="display:none"></div>
+								</div>   
+							</form>
+						</div>
+
+						<!--End mc_embed_signup-->
+
+					</div>
+					
+				</div>
+
+				
+
+				<div class="wrap cf">
+
+					<div class="page-subhead l130">
+						<div class="top-line">
+							<div class="bg"></div>
+							<div class="highlight"></div>
+						</div>
 						<h4>Our Supporters</h4>
 					</div>
 
@@ -265,7 +326,7 @@
 						<p class="helper">C4C Radio gives you every C4C Conversation in one convinient playlist.</p>
 
 						<?php if ($sc) { ?>
-							<iframe width="100%" height="300" class="sc-player" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/<?php echo $sc; ?>&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false&amp;&color=000000"></iframe>
+							<iframe width="100%" height="300" class="sc-player" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/<?php echo $sc; ?>&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false&amp;color=589CA6"></iframe>
 						<?php } ?>
 
 						

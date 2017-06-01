@@ -200,65 +200,96 @@ You can't use @extend within media queries
 anymore, so just be aware that if you drop
 them in here, they won't work.
 */
+/* line 25, ../scss/breakpoints/_481up.scss */
+.mc-field-group {
+  float: left;
+}
+/* line 28, ../scss/breakpoints/_481up.scss */
+.mc-field-group.name-group {
+  width: 30%;
+}
+/* line 32, ../scss/breakpoints/_481up.scss */
+.mc-field-group.email-group {
+  width: 70%;
+}
+/* line 35, ../scss/breakpoints/_481up.scss */
+.mc-field-group.email-group .email {
+  width: 50%;
+}
+/* line 40, ../scss/breakpoints/_481up.scss */
+.mc-field-group #mc-embedded-subscribe {
+  margin-bottom: 0;
+}
+/* line 43, ../scss/breakpoints/_481up.scss */
+.mc-field-group #mc-embedded-subscribe.aqua-btn {
+  border-left: 0;
+}
+/* line 48, ../scss/breakpoints/_481up.scss */
+.mc-field-group #mce-EMAIL {
+  float: left;
+  display: inline-block;
+  border-left: none;
+}
+
 /*********************
 NAVIGATION STYLES
 *********************/
-/* line 30, ../scss/breakpoints/_481up.scss */
+/* line 60, ../scss/breakpoints/_481up.scss */
 .single-left {
   float: left;
 }
 
-/* line 34, ../scss/breakpoints/_481up.scss */
+/* line 64, ../scss/breakpoints/_481up.scss */
 p#share {
   padding-top: 20px;
   float: right;
 }
-/* line 38, ../scss/breakpoints/_481up.scss */
+/* line 68, ../scss/breakpoints/_481up.scss */
 p#share .jssocials-share {
   margin: 0 0 0 0.6em;
 }
-/* line 42, ../scss/breakpoints/_481up.scss */
+/* line 72, ../scss/breakpoints/_481up.scss */
 p#share.less-padd {
   padding-top: 10px;
 }
 
-/* line 49, ../scss/breakpoints/_481up.scss */
+/* line 79, ../scss/breakpoints/_481up.scss */
 p.tags {
   float: left;
 }
 
-/* line 57, ../scss/breakpoints/_481up.scss */
+/* line 87, ../scss/breakpoints/_481up.scss */
 .single-story .photo-meta p {
   font-size: 13px;
 }
-/* line 60, ../scss/breakpoints/_481up.scss */
+/* line 90, ../scss/breakpoints/_481up.scss */
 .single-story .photo-meta p.story-location {
   float: left;
 }
-/* line 64, ../scss/breakpoints/_481up.scss */
+/* line 94, ../scss/breakpoints/_481up.scss */
 .single-story .photo-meta p.photo-credit {
   float: right;
   text-align: right;
 }
 
 /* .menu is clearfixed inside mixins.scss */
-/* line 77, ../scss/breakpoints/_481up.scss */
+/* line 107, ../scss/breakpoints/_481up.scss */
 .menu {
   /* end .menu ul */
 }
-/* line 78, ../scss/breakpoints/_481up.scss */
+/* line 108, ../scss/breakpoints/_481up.scss */
 .menu ul {
   /* end .menu ul li */
   /* highlight current page */
   /* end current highlighters */
 }
-/* line 79, ../scss/breakpoints/_481up.scss */
+/* line 109, ../scss/breakpoints/_481up.scss */
 .menu ul li {
   /*
   plan your menus and drop-downs wisely.
   */
 }
-/* line 80, ../scss/breakpoints/_481up.scss */
+/* line 110, ../scss/breakpoints/_481up.scss */
 .menu ul li a {
   /*
   you can use hover styles here even though this size
@@ -271,23 +302,23 @@ p.tags {
 POSTS & CONTENT STYLES
 *********************/
 /* entry content */
-/* line 125, ../scss/breakpoints/_481up.scss */
+/* line 155, ../scss/breakpoints/_481up.scss */
 .entry-content {
   /* at this larger size, we can start to align images */
 }
-/* line 129, ../scss/breakpoints/_481up.scss */
+/* line 159, ../scss/breakpoints/_481up.scss */
 .entry-content .alignleft, .entry-content img.alignleft {
   margin-right: 1.5em;
   display: inline;
   float: left;
 }
-/* line 134, ../scss/breakpoints/_481up.scss */
+/* line 164, ../scss/breakpoints/_481up.scss */
 .entry-content .alignright, .entry-content img.alignright {
   margin-left: 1.5em;
   display: inline;
   float: right;
 }
-/* line 139, ../scss/breakpoints/_481up.scss */
+/* line 169, ../scss/breakpoints/_481up.scss */
 .entry-content .aligncenter, .entry-content img.aligncenter {
   margin-right: auto;
   margin-left: auto;

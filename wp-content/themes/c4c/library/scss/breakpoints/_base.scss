@@ -118,6 +118,10 @@ LAYOUT & GRID STYLES
 	padding-bottom: 45.5%;
 }
 
+.fve-video-wrapper {
+	margin-bottom: 35px !important;
+}
+
 .hr {
 	display:block;
 	width: 26px;
@@ -264,6 +268,127 @@ p.tags {
 	padding-top: 20px;
 	
 }
+
+.master-slider-parent {
+	margin-bottom: 40px;
+}
+
+#mc_embed_signup {
+	padding-top: 5%;
+	padding-bottom: 8%;
+}
+
+.mc-field-group {
+	
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	  color: $aqua1;
+	}
+	::-moz-placeholder { /* Firefox 19+ */
+	  color: $aqua1;
+	}
+	:-ms-input-placeholder { /* IE 10+ */
+	  color: $aqua1;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+	  color: $aqua1;
+	}
+	
+
+	&.name-group {
+		width: 100%;
+	}
+
+	&.email-group {
+		width: 100%;
+	}
+
+	label, .indicates-required {
+		display:block;
+		font-size: 12px;
+		font-family: $galano;
+		font-weight: 600;
+	}
+
+
+
+	#mce-EMAIL {
+		display:block;
+		color:$aqua1;
+
+		
+	}
+
+	#mc-embedded-subscribe {
+		float:left;
+		margin-bottom: 20px;
+
+		&.aqua-btn {
+			border: 0;
+			height: 40px;
+			line-height: 38px;
+			border: 1px solid $aqua1;
+
+
+		}
+
+		&.sm {
+		    line-height: 40px;
+		    font-size: 13px;
+		}
+	}
+}
+
+#sidebar-newsletter {
+	#mc-embedded-subscribe {
+		width: 100%;
+		font-size: 13px;
+		border:none;
+	}
+
+	li {
+		.aqua-btn {
+			line-height: 38px;
+		}
+
+		input {
+			margin:0;
+			border:0;
+			text-align: center;
+		}
+
+		&.signup {
+			padding:0;
+		}
+	}
+}
+
+.indicates-required {
+	display:block;
+		font-size: 12px;
+		font-family: $galano;
+		font-weight: 600;
+		color:$aqua1;
+	}
+
+#newsletter {
+	.intro {
+		margin-top: 0px;
+		display: block;
+		position: relative;
+		padding-left: 60px;
+		width: 90%;
+		max-width: 640px;
+
+		.hr {
+			position: absolute;
+			height: 4px;
+			left:0;
+			top: 12px;
+			margin:0;
+		}
+	}
+}
+
 /*********************
 HOME STYLES
 *********************/
@@ -720,7 +845,7 @@ ABOUT STYLES
 	.main-photo {
 		display: block;
 		width: 100%;
-		padding-bottom: 44%;
+		padding-bottom: 52%;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
@@ -1922,7 +2047,13 @@ SIDEBARS & ASIDES
 			&:last-child {
 				border: none;
 			}
+
+			&.submit {
+				padding:0;
+			}
 		}
+
+
 
 		&.posts {
 			li {
