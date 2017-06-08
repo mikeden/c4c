@@ -57,7 +57,7 @@
 											}
 											?>
 								  			<p class="story-location">
-								  				By <?php echo $full_name; ?>, <?php echo get_the_date(); ?>
+								  				<?php if (get_field("author")): ?>By <?php the_field("author") ?>, <?php endif; ?> <?php echo get_the_date(); ?>
 								  			</p>
 
 								  			<div class="clearfix"></div>

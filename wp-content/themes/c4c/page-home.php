@@ -296,20 +296,21 @@
 
 					<div class="standard-left-padd add-right">
 						<div class="supporters primary">
-							<a href="http://inspiritfoundation.org/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo-inspirit.png" /></a>
-							<a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/MacMillan_logo.png" /></a>
-							<a href="https://www.nfb.ca/" target="_blank" class="last"><img src="<?php echo get_template_directory_uri(); ?>/library/images/NFB_Logo.png" /></a>
+							<a href="http://inspiritfoundation.org/" target="_blank" title="Inspirit Foundation"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo-inspirit.png" /></a>
+							<a><img src="<?php echo get_template_directory_uri(); ?>/library/images/MacMillan_logo.png" /></a>
+							<a href="https://www.nfb.ca/" target="_blank" class="last" title="NFB"><img src="<?php echo get_template_directory_uri(); ?>/library/images/NFB_Logo.png" /></a>
 						</div>
 
 						<div class="supporters">
 							<p>In partnership with:</p> 
-							<a href="http://www.viarail.ca/en" target="_blank"><img class="no-margin" src="<?php echo get_template_directory_uri(); ?>/library/images/VIA_Rail_Logo.png" /></a>
+							<a href="http://www.viarail.ca/en" target="_blank" title="Via Rail"><img class="no-margin" src="<?php echo get_template_directory_uri(); ?>/library/images/VIA_Rail_Logo.png" /></a>
 						</div>
 
 						<div class="supporters">
-							<a href="http://www.ryerson.ca/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/Ryerson_Logo.png" /></a>
-							<a href="http://carleton.ca/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/Carleton_Logo.png" /></a>
-							<a href="https://www.mitacs.ca/en" target="_blank" class="last"><img src="<?php echo get_template_directory_uri(); ?>/library/images/Mitacs_Logo.png" /></a>
+							<a href="http://discoursemedia.org/" target="_blank" title="Discourse Media"><img src="<?php echo get_template_directory_uri(); ?>/library/images/Discourse_Logo.png" /></a>
+							<a href="http://www.ryerson.ca/" target="_blank" title="Ryerson"><img src="<?php echo get_template_directory_uri(); ?>/library/images/Ryerson_Logo.png" /></a>
+							<a href="http://carleton.ca/" target="_blank" title="Carleton"><img src="<?php echo get_template_directory_uri(); ?>/library/images/Carleton_Logo.png" /></a>
+							<a href="https://www.mitacs.ca/en" target="_blank" class="last" title="Mitacs"><img src="<?php echo get_template_directory_uri(); ?>/library/images/Mitacs_Logo.png" /></a>
 						</div>
 					</div>
 
@@ -323,7 +324,7 @@
 
 					<div class="standard-left-padd add-right" id="c4c-player">
 						<h1>Play and Go </h1>
-						<p class="helper">C4C Radio gives you every C4C Conversation in one convinient playlist.</p>
+						<p class="helper">C4C Radio gives you every C4C Conversation in one convenient playlist.</p>
 
 						<?php if ($sc) { ?>
 							<iframe width="100%" height="300" class="sc-player" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/<?php echo $sc; ?>&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false&amp;color=589CA6"></iframe>

@@ -20,7 +20,10 @@
 							    $full_name = "{$fname} {$lname}";
 							}
 							?>
-							<p class="helper">By <?php echo $full_name; ?>, <?php echo get_the_date(); ?></p>
+
+							<p class="helper">
+								<?php if (get_field("author")): ?>By <?php the_field("author") ?>, <?php endif; ?><?php echo get_the_date(); ?>
+							</p>
 
 						</div>
 					</div>

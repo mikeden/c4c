@@ -343,13 +343,7 @@ function create_tag_taxonomies()
     );
 }
 
-add_filter( 'pre_get_posts', 'be_archive_query' );
-// @link http://www.billerickson.net/customize-the-wordpress-query/
-function be_archive_query( $query ) {
-  if( $query->is_main_query() && $query->is_post_type_archive('conversations') ) {
-    $query->set( 'posts_per_page', 4 );
-  }
-}
+
 
 function wpdocs_custom_excerpt_length( $length ) {
     return 20;

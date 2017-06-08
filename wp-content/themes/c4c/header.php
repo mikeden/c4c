@@ -31,11 +31,29 @@
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
+
+
 		<?php // wordpress head functions ?>
 		<?php wp_head(); ?>
 		<?php // end of wordpress head ?>
 
+		<?php $image = get_field('photo'); ?>
+		<?php if( !empty($image) ): ?>
+			<meta property="og:image" content="<?php echo $image['url']; ?>" />
+			<meta name="twitter:image" content="<?php echo $image['url']; ?>" />
+		<?php endif; ?>
+
 		<?php // drop Google Analytics Here ?>
+			<script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			 
+			  ga('create', 'UA-100570622-1', 'auto');
+			  ga('send', 'pageview');
+			 
+			</script>
 		<?php // end analytics ?>
 
 		<script src="https://use.typekit.net/ssu2voa.js"></script>
@@ -46,6 +64,8 @@
 		    visibility: hidden;
   			}
 		</style>
+
+		
 
 	</head>
 
