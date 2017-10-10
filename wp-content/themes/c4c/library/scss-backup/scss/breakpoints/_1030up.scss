@@ -1,0 +1,88 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+
+.nav {
+	li {
+		a {
+			padding: 19px 26px 8px 26px;
+		}
+	}
+}
+
+.home-intro {
+	width: 32%;
+	top:-120%;
+}
+
+.radio-callout {
+	width: 55%;
+	margin-left: 43%;
+}
+
+h1, .h1 {
+	font-size: 36px;
+}
+
+.single-post {
+	h1, .h1 {
+		font-size: 40px;
+	}
+}
+
+/*********************
+CONVERSATION STYLES
+*********************/
+
+.convo {
+	p.quote {
+		font-size: 32px;
+	}
+}
+
+.single-conversations {
+	
+	.c-header {
+		h1 {
+			font-size: 38px;
+		}
+
+		.caption {
+			font-size: 22px;
+		}
+	}
+}
+
+
+/*********************
+SERIES STYLES
+*********************/
+
+.featured-series {
+
+	.bg-photo {
+		height: 640px;
+	}
+	
+	.copy {
+		width: 32%;
+	}
+}
+
+
+.stories-list {
+
+	.story-item {
+		h2 {
+			font-size: 25px;
+		}
+	}
+
+}

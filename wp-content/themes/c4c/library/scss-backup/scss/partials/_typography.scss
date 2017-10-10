@@ -1,0 +1,115 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Typography
+
+Need to import a font or set of icons for your site? Drop them in
+here or just use this to establish your typographical grid. Or not.
+Do whatever you want to...GOSH!
+
+Helpful Articles:
+http://trentwalton.com/2012/06/19/fluid-type/
+http://ia.net/blog/responsive-typography-the-basics/
+http://alistapart.com/column/responsive-typography-is-a-physical-discipline
+
+******************************************************************/
+
+
+/*********************
+FONT FACE (IN YOUR FACE)
+*********************/
+
+/*  To embed your own fonts, use this syntax
+  and place your fonts inside the
+  library/fonts folder. For more information
+  on embedding fonts, go to:
+  http://www.fontsquirrel.com/
+  Be sure to remove the comment brackets.
+*/
+
+@font-face{
+    font-family:"Galano Grotesque W00 SemiBold";
+    src:url("../fonts/1591506/6a4adaff-3e5f-448f-923e-9dc8aacae9a9.eot?#iefix");
+    src:url("../fonts/1591506/6a4adaff-3e5f-448f-923e-9dc8aacae9a9.eot?#iefix") format("eot"),url("../fonts/1591506/61163eda-7b16-4c14-82e5-cedb885afea7.woff2") format("woff2"),url("../fonts/1591506/f6805913-d8a9-43fd-9dd1-18161300f0da.woff") format("woff"),url("../fonts/1591506/d800f19f-4650-4105-bcfa-8ac0d8a86445.ttf") format("truetype");
+}
+
+
+@font-face {
+  font-family: 'GaramondPremrPro';
+  src: url('../fonts/GaramondPremrPro.eot?#iefix') format('embedded-opentype'),  
+       url('../fonts/GaramondPremrPro.otf')  format('opentype'),
+       url('../fonts/GaramondPremrPro.woff') format('woff'), 
+       url('../fonts/GaramondPremrPro.ttf')  format('truetype'), 
+       url('../fonts/GaramondPremrPro.svg#GaramondPremrPro') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Garamond Premr Pro Capt';
+  src: url('../fonts/GaramondPremrPro-MedCapt.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/GaramondPremrPro-Capt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/GaramondPremrPro-Capt.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/GaramondPremrPro-Capt.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/GaramondPremrPro-Capt.svg#e95e170fba010bf085b936bbb4e638e1') format('svg'); /* Legacy iOS */
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Garamond Premr Pro Med Capt';
+  src: url('../fonts/GaramondPremrPro-MedCapt.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/GaramondPremrPro-MedCapt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/GaramondPremrPro-MedCapt.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/GaramondPremrPro-MedCapt.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/GaramondPremrPro-MedCapt.svg#1aab186091644f204b144578c59edb64') format('svg'); /* Legacy iOS */
+  font-style:   normal;
+  font-weight:  400;
+}
+
+
+
+
+/*
+The following is based of Typebase:
+https://github.com/devinhunt/typebase.css
+I've edited it a bit, but it's a nice starting point.
+*/
+
+
+// font stacks
+$sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+
+/*
+ i imported this one in the functions file so bones would look sweet.
+ don't forget to remove it for your site.
+*/
+$lato:         'Lato', $sans-serif;
+
+$garamond-reg:      'garamond-premier-pro',serif;
+$garamond-capt:     'garamond-premier-pro-caption',serif;
+$garamond-subhead:   'garamond-premier-pro-subhead',serif;
+
+$galano:            'Galano Grotesque W00 SemiBold', $sans-serif;
+            
+
+/*
+some nice typographical defaults
+more here: http://www.newnet-soft.com/blog/csstypography
+*/
+p {
+  -ms-word-wrap: break-word;
+  word-break: break-word; //non-standart css for webkit
+  word-wrap: break-word;
+  // cleaning up the ragged lines and breaks
+    -moz-hyphens: none;
+  -ms-hyphens: none;
+  -webkit-hyphens: none;
+  hyphens: none;
+
+}
+
+
+

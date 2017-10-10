@@ -1,0 +1,54 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Super Large Monitor Stylesheet
+
+You can add some advanced styles here if you like. This kicks in
+on larger screens.
+
+******************************************************************/
+
+.home-intro {
+
+	top: -100%;
+}
+
+.radio-callout {
+
+}
+
+
+
+.videoWrapper {
+	width: 1600px;
+}
+
+/*********************
+SERIES STYLES
+*********************/
+
+.stories-list {
+
+	.left-column {
+
+		h2, p {
+			padding-left: 40%;
+		}
+
+		p {
+			padding-left: 40%;
+		}
+	}
+
+	.right-column {
+
+		h2, p {
+			padding-right: 40%;
+		}
+
+		p {
+			padding-right: 40%;
+		}
+	}
+}

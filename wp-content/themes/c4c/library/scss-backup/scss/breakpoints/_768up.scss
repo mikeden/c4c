@@ -1,0 +1,843 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {}
+
+
+
+p {
+	font-size: 18px;
+}
+
+a.section-links {
+	font-size: 18px;
+
+	&.sm {
+		font-size: 18px;
+	}
+}
+
+p.helper {
+	font-size: 13px;
+
+	&.comments {
+		font-size: 16px;
+	}
+}
+
+.entry-content {
+	p {
+		font-size: 21px;
+	}
+
+	ol, ul {
+		li {font-size: 21px;}
+	}
+
+	blockquote {
+		p {
+			font-size: 30px;
+		}
+	}
+}
+
+h1, .h1 {
+	font-size: 32px;
+}
+
+.comment_content {
+	p {
+		font-size: 21px;
+	}
+} 
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+#content {
+	margin-top: 1.5em;
+}
+
+.wrap {
+	&.full-mobile {
+		
+	}
+
+	&.wrap-full {
+		width: 100%;
+	}
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+.header {}
+
+.logo {
+	margin: 0 12px 0 16px;
+	position: relative;
+	width: 185px;
+	height: 48px;
+	background-position: 46% 21px;
+	z-index:99;
+
+	.highlight {
+		opacity:0;
+		width: 98%;
+		height: 6px;
+		background: $aqua1;
+		border-right: 7px solid $white;
+		border-left: 7px solid $white;
+		position: absolute;
+		top: -2px;
+		left:0;
+		z-index:2;
+
+	   	transition: opacity .15s ease-in-out;
+	   	-moz-transition: opacity .15s ease-in-out;
+	   	-webkit-transition: opacity .15s ease-in-out;
+	}
+
+	&:hover {
+		.highlight {
+			opacity:1;
+		}
+	}
+
+
+
+}
+
+.home .logo {
+
+	.highlight {
+		opacity:1;
+	}
+}
+
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+.videoWrapper {
+	width:94%;
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+.page-subhead {
+
+	padding-bottom: 100px;
+	
+	h4 {
+		font-size: 16px;
+		margin-left: $left-padd;
+	}
+
+	.top-line {
+
+		.highlight {
+			border-left: 3px solid $white;
+			margin-left: $left-padd;
+
+		}
+
+	}
+}
+
+.standard-left-padd {
+	 padding-left: $left-padd;
+
+
+	 &.section-callout {
+	 	padding-top: 80px;
+		padding-bottom: 180px;
+	}
+
+	&.add-right {
+		padding-right: $left-padd;
+	}
+}
+
+.w75 {
+	width: 75%;
+}
+
+
+/*********************
+HOME STYLES
+*********************/
+
+
+.home-intro {
+	position: absolute;
+	width: 40%;
+
+	
+	margin: 0;
+	margin-top: auto;
+	display:block;
+	background:$white;
+	z-index:2;
+	top:-128%;
+	left: 8%;
+
+	h1 {
+		font-size: 37px;
+	}
+}
+
+.radio-callout {
+	width: 48%;
+	margin-left: 50%;
+}
+
+.supporters {
+	text-align: center;
+
+	a {
+		display: inline;
+		img {
+			margin: 0 5% 40px 5%;
+		}
+
+	}
+}
+
+/*********************
+CONVERSATION STYLES
+*********************/
+
+.convo {
+	p.quote {
+		font-size: 26px;
+		padding-right: 8%;
+	}
+
+	p.caption {
+		font-family: $galano;
+		font-size: 13px;
+	}
+
+	&.even {
+		padding-top: 8%;
+		p.quote {
+			padding-left: 28%;
+		}
+	}
+
+}
+
+
+.single-conversations {
+
+	p {
+		font-size: 21px;
+
+		&.comment-notes {
+			font-size: 18px;
+		}
+	}
+	
+	.c-header {
+		h1 {
+			font-size: 32px;
+			padding-right: 35%;
+		}
+
+		.caption {
+			font-size: 18px;
+		}
+
+
+	}
+}
+
+/*********************
+SERIES STYLES
+*********************/
+
+.featured-series {
+
+	.bg-photo {
+
+	}
+
+	.location {
+		font-size: 13px;
+	}
+
+	.photo-caption {
+		font-size: 13px;
+		padding-right: 10%;
+	}
+
+	.copy {
+		width: 40%;
+		left: 8%;
+	}
+}
+
+.series-index {
+	.even {
+		.copy {
+			left: auto;
+			right: 8%;
+		}
+	}
+}
+
+.stories-list {
+
+	.story-item {
+		h2 {
+			font-size: 21px;
+		}
+
+		&.v1 {
+			.photo {
+				width: 80%;
+			}
+		}
+
+		&.v2 {
+			.photo {
+				width: 90%;
+			}
+		}
+
+		&.v3 {
+			.photo {
+				width: 95%;
+			}
+		}
+
+		.hr {
+			display:block;
+			width: 80%;
+			height: 1px;
+		}
+	}
+
+	.left-column {
+		padding-right: 5%;
+
+		h2, p {
+			text-align: right;
+			padding-left: 20%;
+		}
+
+		p {
+			padding-left: 20%;
+		}
+
+		.photo {
+			float: right;
+		}
+
+
+		.story-item:last-child {
+			.hr {
+				display:none;
+			}
+		}
+
+		.hr {
+			float: right;
+		}
+	}
+
+	.right-column {
+		padding-top: 115px;
+		padding-left: 5%;
+
+		h2, p {
+			text-align: left;
+			padding-right: 20%;
+		}
+
+		p {
+			padding-right: 20%;
+		}
+
+		.photo {
+			float: left;
+		}
+
+		.story-item:last-child {
+			.hr {
+				display:none;
+			}
+		}
+	}
+}
+
+.single-story {
+
+	p {
+		&.comment-notes {
+			font-size: 18px;
+		}
+	}
+
+	.entry
+	
+	.c-header {
+		h1 {
+			font-size: 32px;
+			padding-right: 35%;
+		}
+
+		.caption {
+			font-size: 18px;
+		}
+
+
+	}
+}
+
+
+/*********************
+JOURNAL STYLES
+*********************/
+
+.single-post {
+	article {
+		padding-right: 5%;
+	}
+}
+
+
+/*********************
+ABOUT STYLES
+*********************/
+
+.page-about {
+	.entry-content {
+		p {
+			padding-right: 30%;
+		}
+
+		blockquote {
+
+			p {
+				padding-right: 10%;
+			}
+
+		}
+	}
+
+	.contact {
+		.contact-header {
+			font-size: 14px;
+		}
+	}
+}
+
+
+.team {
+	.row {
+
+		.team-member {
+			width: 27.5%;
+			float: left;
+
+			.photo {
+				width: 95%;
+			}
+
+			p {
+				padding-bottom: 130px;
+			}
+
+		}
+		&.r2 {
+			.team-member {
+				float: right;
+			}
+		}
+	}
+
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+
+.slicknav_menu {
+	display: none;
+}
+
+.logo.mobile-logo {
+	display: none;
+}
+
+.header {
+	display:block;
+}
+
+.nav {
+	border-top: 2px solid $aqua1;
+	margin-top: 12px;
+
+	&.footer-nav {
+		border:none;
+		li {
+			float: none;
+
+		}
+	}
+
+	ul {
+		background:$black;
+		margin-top:0;
+		overflow: visible;
+
+	}
+	li {
+		float: left;
+		position: relative;
+		overflow: visible;
+
+		a {
+			border-bottom: 0;
+			color: $aqua1;
+			font-family: $garamond-capt;
+			font-weight: 500;
+			font-size: 16px;
+			text-decoration: none;
+			padding: 19px 13px 8px 13px;
+			position: relative;
+			overflow: visible;
+
+			/*
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/
+			&:hover, &:focus {
+				color: $aqua1;
+				text-decoration: none;
+				background:$white;
+
+				.highlight {
+					background:$aqua2;
+					opacity:1;
+				}
+			}
+
+			.highlight {
+				opacity:0;
+				width: 96%;
+				height: 6px;
+				background: $aqua1;
+				border-right: 7px solid $white;
+				border-left: 7px solid $white;
+				position: absolute;
+				top: -4px;
+				left:0;
+				z-index:2;
+
+			   	transition: opacity .15s ease-in-out;
+			   	-moz-transition: opacity .15s ease-in-out;
+			   	-webkit-transition: opacity .15s ease-in-out;
+			}
+		}
+
+		&:first-child {}
+		&:last-child {}
+
+		&.current-menu-item {
+			a {
+				.highlight {
+					opacity:1;
+				}
+			}
+		}
+
+		/*
+		plan your menus and drop-downs wisely.
+		*/
+		ul.sub-menu,
+		ul.children {
+			margin-top: 0;
+			border: 1px solid #ccc;
+			border-top: 0;
+			position: absolute;
+			visibility: hidden;
+			z-index: 8999;
+
+			li {
+
+				a {
+					padding-left: 10px;
+					border-right: 0;
+					display: block;
+					width: 180px;
+					border-bottom: 1px solid #ccc;
+
+					&:hover,
+					&:focus {}
+
+					&:link {}
+				}
+
+				&:first-child {}
+
+				&:last-child {
+
+					a {
+						border-bottom: 0;
+					}
+				}
+
+				/*
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
+				*/
+				ul {
+					top:0;
+					left:100%;
+				}
+			}
+
+			/* highlight sub-menu current page */
+			li.current-menu-item,
+			li.current_page_item,
+			li.current_page_ancestor {
+				a {}
+			}
+		}
+
+		/* showing sub-menus */
+		&:hover > ul {
+			top: auto;
+			visibility:visible;
+		}
+
+	} /* end .menu ul li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current_page_ancestor {
+		a {}
+	}  /* end current highlighters */
+
+} /* end .nav */
+
+
+.post-type-archive-conversations .menu-item-17 a {
+	.highlight {
+		opacity:1;
+	}
+}
+
+.single-post .current_page_parent a {
+	.highlight {
+		opacity:1;
+	}
+}
+
+.single-conversations .menu-item-17 a {
+	.highlight {
+		opacity:1;
+	}
+}
+
+.single-story .menu-item-16 a {
+	.highlight {
+		opacity:1;
+	}
+}
+
+.nav li.current-page-ancestor a {
+	.highlight {
+		opacity:1;
+	}
+}
+
+.social-menu {
+	&.top-social {
+		display:block;
+	}
+}
+
+.comment-reply-link {
+	padding-right: 15%;
+}
+
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+	margin-top: 0;
+}
+
+	.widgettitle {
+		border-bottom: 2px solid #444;
+		margin-bottom: 0.75em;
+	}
+
+	.widget {
+		padding: 0 10px;
+		margin: 2.2em 0;
+
+		ul {
+			li {
+				margin-bottom: 0.75em;
+
+				&:first-child {}
+				&:last-child {}
+				a {}
+				/* deep nesting */
+
+				ul {
+					margin-top: 0.75em;
+					padding-left: 1em;
+				}
+			}
+		}
+	}
+
+
+	/* links widget */
+	.widget_links {}
+	.widget_links ul {}
+	.widget_links ul li {}
+	.widget_links ul li a {}
+
+	/* meta widget */
+	.widget_meta {}
+	.widget_meta ul {}
+	.widget_meta ul li {}
+	.widget_meta ul li a {}
+
+	/* pages widget */
+	.widget_pages {}
+	.widget_pages ul {}
+	.widget_pages ul li {}
+	.widget_pages ul li a {}
+
+	/* recent-posts widget */
+	.widget_recent_entries {}
+	.widget_recent_entries ul {}
+	.widget_recent_entries ul li {}
+	.widget_recent_entries ul li a {}
+
+	/* archives widget */
+	.widget_archive {}
+	.widget_archive ul {}
+	.widget_archive ul li {}
+	.widget_archive ul li a {}
+	.widget_archive select {}
+	.widget_archive option {}
+
+	/* tag-cloud widget */
+	.widget_links {}
+	.widget_links li:after {}
+	.widget_links li:before {}
+	.widget_tag_cloud {}
+	.widget_tag_cloud a {}
+	.widget_tag_cloud a:after {}
+	.widget_tag_cloud a:before {}
+
+	/* calendar widget */
+	.widget_calendar {}
+	#calendar_wrap {}
+	#calendar_wrap th {}
+	#calendar_wrap td {}
+	#wp-calendar tr td {}
+	#wp-calendar caption {}
+	#wp-calendar a {}
+	#wp-calendar #today {}
+	#wp-calendar #prev {}
+	#wp-calendar #next {}
+	#wp-calendar #next a {}
+	#wp-calendar #prev a {}
+
+	/* category widget */
+	.widget_categories {}
+	.widget_categories ul {}
+	.widget_categories ul li {}
+	.widget_categories ul ul.children {}
+	.widget_categories a {}
+	.widget_categories select{}
+	.widget_categories select#cat {}
+	.widget_categories select.postform {}
+	.widget_categories option {}
+	.widget_categories .level-0 {}
+	.widget_categories .level-1 {}
+	.widget_categories .level-2 {}
+	.widget_categories .level-3 {}
+
+	/* recent-comments widget */
+	.recentcomments {}
+	#recentcomments {}
+	#recentcomments li {}
+	#recentcomments li a {}
+	.widget_recent_comments {}
+
+	/* search widget */
+	#searchform {}
+	.widget_search {}
+	.screen-reader-text {}
+
+	/* text widget */
+	.textwidget {}
+	.widget_text {}
+	.textwidget p {}
+
+
+/*********************
+FOOTER STYLES
+*********************/
+
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+
+.footer {
+	margin-top: 150px;
+}
+.footer-links {
+	ul {
+		li {
+			a {
+				&:hover {}
+			}
+			/*
+			be careful with the depth of your menus.
+			it's very rare to have multi-depth menus in
+			the footer.
+			*/
+			ul {}
+		}
+	}
+} /* end .footer-links */
+

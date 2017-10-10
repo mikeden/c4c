@@ -1,0 +1,154 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Button Styles
+
+Buttons are a pretty important part of your site's style, so it's
+important to have a consistent baseline for them. Use this stylesheet
+to create all kinds of buttons.
+
+Helpful Links:
+http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
+
+******************************************************************/
+
+/*********************
+BUTTON DEFAULTS
+We're gonna use a placeholder selector here
+so we can use common styles. We then use this
+to load up the defaults in all our buttons.
+
+Here's a quick video to show how it works:
+http://www.youtube.com/watch?v=hwdVpKiJzac
+
+*********************/
+
+%btn {
+  display: inline-block;
+  position: relative;
+  font-family: $galano;
+  text-decoration: none;
+  color: $white;
+  font-size: 16px;
+  line-height: 44px;
+  font-weight: normal;
+  padding: 0 22px;
+  border-radius: 0px;
+  text-transform: uppercase;
+  border: 0;
+  cursor: pointer;
+  @include transition(background-color 0.14s ease-in-out);
+
+  // hovering on the btn
+  &:hover, &:focus {
+    color: $white;
+    text-decoration: none;
+    outline: none;
+  } // end hover
+
+  // clicking on the button
+  &:active {
+    //top: 1px; // adds a tiny hop to the click
+  } // end active
+
+} // end .button
+
+/*
+An example button.
+You can use this example if you want. Just replace all the variables
+and it will create a button dependant on those variables.
+*/
+.aqua-btn {
+  @extend %btn; // here we load the btn defaults
+  background-color: $aqua1;
+  border: 2px solid $white;
+  color:$white !important;
+
+  &:hover,
+  &:focus {
+    color:$aqua1 !important;
+    background-color: $white;
+    border: 2px solid $aqua1;
+  } // end hover
+
+  &:active {
+    background-color: $white;
+  } // end active
+
+} // end aqua button
+
+.white-btn {
+  @extend %btn; // here we load the btn defaults
+  background-color: $white;
+  border: 2px solid $aqua1;
+  color:$aqua1;
+
+  &:visited {
+    background-color: $white;
+    border: 2px solid $aqua1;
+    color:$aqua1;
+  }
+
+  &:hover,
+  &:focus {
+    color:$white !important;
+    background-color: $aqua1;
+    border: 2px solid $aqua1;
+  } // end hover
+
+  &:active {
+    background-color: $aqua1;
+  } // end active
+
+} // end white button
+
+.sm {
+    line-height: 40px;
+    font-size: 13px;
+    text-transform: none;
+}
+
+.x-sm {
+  line-height: 25px;
+  font-size: 10px;
+  padding: 0 11px;
+}
+
+.category-list a {
+  @extend %btn;
+   line-height: 25px;
+  font-size: 10px;
+  padding: 0 11px;
+  background-color: $text-color;
+  color:$white !important;
+  border: 2px solid $text-color;
+
+  &:hover {
+    color:$text-color !important;
+    background:$white;
+  }
+}
+
+ button, html input[type="button"], input[type="reset"], input[type="submit"] {
+     @extend %btn;
+}
+
+.jssocials-share-link {
+   @extend %btn;
+   margin: 0 !important;
+  line-height: 21px !important;
+  font-size: 10px;
+  padding: 0 11px;
+  border-radius: 0px !important;
+  background: $gray;
+  color:$white !important;
+  border: 2px solid $gray !important;
+  padding: 0 18px 0 9px !important;
+  text-align: left !important;
+
+  &:hover {
+    color: $gray !important;
+    background:$white !important;
+  }
+}
